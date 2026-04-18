@@ -1,0 +1,6 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+shapely>=2.0
+pyproj>=3.6
+pvlib>=0.10
+requests>=2.31

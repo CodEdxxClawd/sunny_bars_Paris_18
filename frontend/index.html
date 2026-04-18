@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sunny Bars — 18e</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/static/vendor/maplibre-gl.css?v=4">
+<style>
+  :root {
+    --accent: #f5b700;
+    --ink: #2b2f38;
+    --muted: #6b7280;
+    --card: rgba(255, 255, 255, 0.72);
+    --card-border: rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.12), 0 1px 0 rgba(255,255,255,.6) inset;
+    --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+  }
+  html, body { margin: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; color: var(--ink); }
+  #map { position: absolute; inset: 0; }
+  header {
+    position: absolute; top: 12px; left: 12px; right: 12px;
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    padding: 10px 14px;
+    background: var(--card);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+  }
+  header h1 { font-size: 15px; margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+  header label { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  input[type="datetime-local"], input[type="search"], select, button {
+    font: inherit; font-size: 13px; padding: 6px 10px;
+    border: 1px solid var(--card-border); border-radius: 8px;
+    background: rgba(255,255,255,.8); color: var(--ink);
+    transition: border-color .15s, box-shadow .15s;
+  }
+  input:focus, select:focus, button:focus { outline: none;
+    border-color: var(--accent); box-shadow: 0 0 0 3px rgba(245,183,0,.2); }
+  button { cursor: pointer; font-weight: 500; }
+  button:hover { background: #fff; }
+  #stats { font-size: 12px; color: var(--muted); margin-left: auto; }
+  .search-wrap { position: relative; }
+  #search { width: 220px; }
+  #suggest {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+    background: #fff; border: 1px solid var(--card-border); border-radius: 10px;
+    max-height: 280px; overflow-y: auto; z-index: 2000;
+    box-shadow: var(--shadow-sm); display: none; overflow: hidden;
+  }
+  #suggest div { padding: 8px 12px; cursor: pointer; font-size: 13px; border-bottom: 1px solid #f2f2f2; }
+  #suggest div:last-child { border-bottom: none; }
+  #suggest div:hover, #suggest div.active { background: #fff8e0; }
+  #suggest .kind { color: var(--muted); font-size: 11px; float: right; text-transform: uppercase; letter-spacing: .04em; }
+  #weather {
+    font-size: 12px; padding: 5px 12px; border-radius: 999px;
+    background: #eef3f7; color: #334; white-space: nowrap; font-weight: 500;
+  }
+  #weather.warn { background: #fde8d4; color: #7a3b00; }
+  #weather.bad { background: #f7d3d3; color: #7a0000; }
+  #weather.hidden { display: none; }
+  .slider-wrap { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 200px; max-width: 360px; }
+  #timeSlider { flex: 1; accent-color: var(--accent); }
+  #timeLabel { font-size: 12px; color: var(--muted); min-width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+  .bar-marker {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,.35), 0 0 0 2px #fff;
+    cursor: pointer;
+    transition: transform .12s;
+  }
+  .bar-marker:hover { transform: scale(1.12); }
+  .bar-marker.unconfirmed {
+    width: 22px; height: 22px; font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25), 0 0 0 2px rgba(255,255,255,.85);
+    opacity: .78;
+  }
+  .legend {
+    position: absolute; bottom: 16px; left: 16px; z-index: 1000;
+    background: var(--card);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid var(--card-border); border-radius: 10px;
+    padding: 10px 14px; font-size: 12px; line-height: 1.7;
+    box-shadow: var(--shadow-sm);
+  }
+  .legend .sw {
+    display: inline-block; width: 12px; height: 12px; border-radius: 50%;
+    vertical-align: -1px; margin-right: 7px;
+    box-shadow: 0 0 0 2px #fff;
+  }
+  .legend .sw.dash { box-shadow: 0 0 0 2px rgba(255,255,255,.7); opacity: .7; }
+
+  /* Popup premium */
+  .maplibregl-popup.popup-premium .maplibregl-popup-tip { border-top-color: #fff; }
+  .maplibregl-popup.popup-premium .maplibregl-popup-content {
+    padding: 0; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,.18);
+    border: 1px solid var(--card-border);
+    min-width: 220px; max-width: 280px;
+  }
+  .popup-card { font-family: inherit; color: var(--ink); }
+  .popup-head { padding: 12px 14px 8px; display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .popup-title { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; flex: 1; }
+  .popup-badge { font-size: 16px; line-height: 1; }
+  .popup-meta { font-size: 11px; color: var(--muted); padding: 0 14px 10px; border-bottom: 1px solid #f1efe9; letter-spacing: .01em; }
+  .popup-hero { padding: 14px; text-align: center; }
+  .popup-hero-metric { font-size: 32px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .popup-hero-metric.shadow { color: var(--muted); }
+  .popup-hero-label { font-size: 11px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: .06em; }
+  .popup-note { padding: 10px 14px 14px; font-size: 12px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>☀️ Sunny Bars · 18e</h1>
+  <label>Quand <input id="when" type="datetime-local"></label>
+  <button id="now">maintenant</button>
+  <span class="slider-wrap">
+    <input id="timeSlider" type="range" min="0" max="1" step="1" value="0" disabled>
+    <span id="timeLabel">--:--</span>
+  </span>
+  <select id="filter">
+    <option value="all">Tout</option>
+    <option value="bar_cafe">Bars & cafés</option>
+    <option value="restaurant">Restaurants</option>
+  </select>
+  <span class="search-wrap">
+    <input id="search" type="search" placeholder="rue, café, resto…" autocomplete="off">
+    <div id="suggest"></div>
+  </span>
+  <span id="weather" class="hidden"></span>
+  <span id="stats"></span>
+</header>
+<div id="map"></div>
+<div class="legend">
+  <div><span class="sw" style="background:#f5b700"></span>terrasse confirmée, au soleil</div>
+  <div><span class="sw" style="background:#4a5b6b"></span>terrasse confirmée, à l'ombre</div>
+  <div><span class="sw dash" style="background:#f5b700"></span>terrasse probable (non taguée)</div>
+</div>
+<script src="/static/vendor/maplibre-gl.js?v=5"></script>
+<script src="/static/app.js?v=10"></script>
+</body>
+</html>

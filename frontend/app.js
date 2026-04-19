@@ -36,7 +36,6 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bott
 
 map.on('load', () => {
   map.addSource('shadows', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
-  // Insère shadows-fill juste avant le layer des bâtiments pour qu'ils "s'élèvent" au-dessus
   const layers = map.getStyle().layers;
   const buildingLayer = layers.find(l => l.id === 'building-3d' || l.id === 'building' || l.type === 'fill-extrusion');
   const beforeId = buildingLayer ? buildingLayer.id : undefined;
@@ -44,19 +43,42 @@ map.on('load', () => {
     id: 'shadows-fill', type: 'fill', source: 'shadows',
     paint: { 'fill-color': '#1c2230', 'fill-opacity': 0.38, 'fill-antialias': true }
   }, beforeId);
+
+  map.addSource('bars', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({
+    id: 'bars-halo', type: 'circle', source: 'bars',
+    paint: {
+      'circle-radius': ['case', ['get', 'confirmed'], 9, 6.5],
+      'circle-color': '#ffffff',
+      'circle-opacity': ['case', ['get', 'confirmed'], 1, 0.85],
+    },
+  });
+  map.addLayer({
+    id: 'bars-dot', type: 'circle', source: 'bars',
+    paint: {
+      'circle-radius': ['case', ['get', 'confirmed'], 7, 4.5],
+      'circle-color': ['case', ['get', 'sunny'], '#f5b700', '#4a5b6b'],
+      'circle-opacity': ['case', ['get', 'confirmed'], 1, 0.78],
+      'circle-stroke-width': 0,
+    },
+  });
+
+  map.on('click', 'bars-dot', (e) => {
+    const f = e.features[0];
+    if (!f) return;
+    const b = JSON.parse(f.properties.bar);
+    const popup = new maplibregl.Popup({ offset: 12, className: 'popup-premium', closeButton: false })
+      .setLngLat([b.lon, b.lat])
+      .setHTML(popupHTML(b, null))
+      .addTo(map);
+    hydratePopup(popup, b);
+  });
+  map.on('mouseenter', 'bars-dot', () => { map.getCanvas().style.cursor = 'pointer'; });
+  map.on('mouseleave', 'bars-dot', () => { map.getCanvas().style.cursor = ''; });
 });
 
-const markers = new Map();
 let lastData = null;
 let streets = [];
-
-function markerEl(sunny, confirmed) {
-  const el = document.createElement('div');
-  el.className = 'bar-marker' + (confirmed ? '' : ' unconfirmed');
-  el.style.background = sunny ? '#f5b700' : '#4a5b6b';
-  el.textContent = sunny ? '☀️' : '🌑';
-  return el;
-}
 
 function fmtDur(min) {
   if (min == null) return null;
@@ -105,9 +127,7 @@ function popupHTML(b, forecast) {
   </div>`;
 }
 
-async function hydratePopup(marker, b) {
-  const popup = marker.getPopup();
-  popup.setHTML(popupHTML(b, null));
+async function hydratePopup(popup, b) {
   try {
     const r = await fetch(`/forecast?id=${encodeURIComponent(b.id)}&datetime=${encodeURIComponent(whenInput.value)}`);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -133,28 +153,30 @@ function renderWeather() {
 
 function render() {
   if (!lastData) return;
-  for (const m of markers.values()) m.remove();
-  markers.clear();
-
   const cat = filterSel.value;
   const bars = lastData.bars.filter(b => cat === 'all' || b.category === cat);
 
   let sunny = 0, sunnyConfirmed = 0, confirmed = 0;
+  const features = [];
   for (const b of bars) {
     if (b.sunny) sunny++;
     if (b.terrace_confirmed) {
       confirmed++;
       if (b.sunny) sunnyConfirmed++;
     }
-    const popup = new maplibregl.Popup({ offset: 18, className: 'popup-premium', closeButton: false })
-      .setHTML(popupHTML(b, null));
-    const m = new maplibregl.Marker({ element: markerEl(b.sunny, b.terrace_confirmed), anchor: 'center' })
-      .setLngLat([b.lon, b.lat])
-      .setPopup(popup)
-      .addTo(map);
-    popup.on('open', () => hydratePopup(m, b));
-    markers.set(b.id, m);
+    features.push({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [b.lon, b.lat] },
+      properties: {
+        sunny: !!b.sunny,
+        confirmed: !!b.terrace_confirmed,
+        bar: JSON.stringify(b),
+      },
+    });
   }
+  const src = map.getSource('bars');
+  if (src) src.setData({ type: 'FeatureCollection', features });
+
   stats.textContent = `${sunnyConfirmed}/${confirmed} confirmés au soleil · ${sunny}/${bars.length} total · ${lastData.elevation.toFixed(0)}° az ${lastData.azimuth.toFixed(0)}°`;
   renderWeather();
   syncSlider();

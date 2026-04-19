@@ -17,8 +17,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "CONFIRM\u00c9",
-        "visual_reason": "Large terrace visible with umbrellas."
+        "visual_verdict": "SOUCONTE",
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -37,8 +37,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "ABSENT",
-        "visual_reason": "No outdoor furniture detected, only interior."
+        "visual_verdict": "SOUCONTE",
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -57,8 +57,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Small exterior space, potentially only 1 table."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -78,7 +78,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "CONFIRM\u00c9",
-        "visual_reason": "Clear outdoor seating area."
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Activity."
       }
     },
     {
@@ -98,7 +98,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -117,8 +117,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Activity, Furniture."
       }
     },
     {
@@ -137,8 +137,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -158,7 +158,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -177,8 +177,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -198,7 +198,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -217,8 +217,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Furniture."
       }
     },
     {
@@ -238,7 +238,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -257,8 +257,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -277,8 +277,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Protection."
       }
     },
     {
@@ -297,8 +297,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -317,8 +317,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -337,8 +337,8 @@
         "category": "bar_cafe",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity."
       }
     },
     {
@@ -357,8 +357,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Architecture."
       }
     },
     {
@@ -378,7 +378,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -398,7 +398,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -418,7 +418,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -437,8 +437,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Architecture, Activity."
       }
     },
     {
@@ -457,8 +457,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Activity."
       }
     },
     {
@@ -477,8 +477,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -497,8 +497,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries, Architecture."
       }
     },
     {
@@ -517,8 +517,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Furniture, Architecture."
       }
     },
     {
@@ -537,8 +537,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -557,8 +557,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -577,8 +577,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Protection, Activity."
       }
     },
     {
@@ -597,8 +597,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -618,7 +618,7 @@
         "terrace": "sidewalk",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -637,8 +637,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries, Architecture."
       }
     },
     {
@@ -657,8 +657,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Architecture."
       }
     },
     {
@@ -677,8 +677,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries."
       }
     },
     {
@@ -697,8 +697,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity, Protection."
       }
     },
     {
@@ -717,8 +717,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -737,8 +737,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Protection, Activity."
       }
     },
     {
@@ -757,8 +757,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -778,7 +778,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -798,7 +798,7 @@
         "terrace": "no",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -817,8 +817,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -837,8 +837,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Architecture, Furniture."
       }
     },
     {
@@ -857,8 +857,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -878,7 +878,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -897,8 +897,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Boundaries, Furniture."
       }
     },
     {
@@ -917,8 +917,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Activity."
       }
     },
     {
@@ -937,8 +937,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity, Protection."
       }
     },
     {
@@ -957,8 +957,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Architecture."
       }
     },
     {
@@ -978,7 +978,7 @@
         "terrace": "no",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -998,7 +998,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1018,7 +1018,7 @@
         "terrace": "no",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1037,8 +1037,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries, Architecture."
       }
     },
     {
@@ -1057,8 +1057,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1077,8 +1077,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries, Activity."
       }
     },
     {
@@ -1097,8 +1097,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Protection."
       }
     },
     {
@@ -1117,8 +1117,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity."
       }
     },
     {
@@ -1138,7 +1138,7 @@
         "terrace": "terrace",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1157,8 +1157,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1177,8 +1177,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1197,8 +1197,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Architecture."
       }
     },
     {
@@ -1217,8 +1217,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture."
       }
     },
     {
@@ -1237,8 +1237,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1257,8 +1257,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Architecture, Boundaries."
       }
     },
     {
@@ -1278,7 +1278,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1297,8 +1297,8 @@
         "category": "bar_cafe",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Architecture."
       }
     },
     {
@@ -1318,7 +1318,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1337,8 +1337,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Protection."
       }
     },
     {
@@ -1358,7 +1358,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1377,8 +1377,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1397,8 +1397,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1417,8 +1417,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Activity, Architecture."
       }
     },
     {
@@ -1438,7 +1438,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1457,8 +1457,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Architecture, Activity."
       }
     },
     {
@@ -1477,8 +1477,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1497,8 +1497,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1518,7 +1518,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1537,8 +1537,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries, Activity."
       }
     },
     {
@@ -1558,7 +1558,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1577,8 +1577,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture, Protection."
       }
     },
     {
@@ -1597,8 +1597,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Activity."
       }
     },
     {
@@ -1617,8 +1617,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries."
       }
     },
     {
@@ -1637,8 +1637,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1658,7 +1658,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1677,8 +1677,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1698,7 +1698,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1718,7 +1718,7 @@
         "terrace": "no",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1737,8 +1737,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1757,8 +1757,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Boundaries, Protection."
       }
     },
     {
@@ -1777,8 +1777,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries."
       }
     },
     {
@@ -1797,8 +1797,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture."
       }
     },
     {
@@ -1817,8 +1817,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture."
       }
     },
     {
@@ -1838,7 +1838,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1858,7 +1858,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1877,8 +1877,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1898,7 +1898,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -1917,8 +1917,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1937,8 +1937,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Protection."
       }
     },
     {
@@ -1957,8 +1957,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1977,8 +1977,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -1997,8 +1997,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Architecture, Furniture."
       }
     },
     {
@@ -2018,7 +2018,7 @@
         "terrace": "no",
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2037,8 +2037,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries, Architecture."
       }
     },
     {
@@ -2058,7 +2058,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2077,8 +2077,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity."
       }
     },
     {
@@ -2097,8 +2097,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Boundaries."
       }
     },
     {
@@ -2117,8 +2117,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2137,8 +2137,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2158,7 +2158,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2177,8 +2177,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Furniture."
       }
     },
     {
@@ -2197,8 +2197,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2217,8 +2217,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries."
       }
     },
     {
@@ -2238,7 +2238,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2257,8 +2257,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Activity."
       }
     },
     {
@@ -2278,7 +2278,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2298,7 +2298,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2317,8 +2317,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Architecture."
       }
     },
     {
@@ -2337,8 +2337,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Protection."
       }
     },
     {
@@ -2357,8 +2357,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Protection."
       }
     },
     {
@@ -2378,7 +2378,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2397,8 +2397,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Furniture."
       }
     },
     {
@@ -2417,8 +2417,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2437,8 +2437,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Activity, Boundaries."
       }
     },
     {
@@ -2457,8 +2457,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Activity, Architecture."
       }
     },
     {
@@ -2477,8 +2477,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Protection."
       }
     },
     {
@@ -2497,8 +2497,8 @@
         "category": "bar_cafe",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2517,8 +2517,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2537,8 +2537,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Protection, Boundaries."
       }
     },
     {
@@ -2557,8 +2557,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Boundaries."
       }
     },
     {
@@ -2577,8 +2577,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture."
       }
     },
     {
@@ -2597,8 +2597,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2618,7 +2618,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2638,7 +2638,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2657,8 +2657,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Boundaries."
       }
     },
     {
@@ -2677,8 +2677,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity."
       }
     },
     {
@@ -2697,8 +2697,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Architecture, Activity."
       }
     },
     {
@@ -2717,8 +2717,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture."
       }
     },
     {
@@ -2737,8 +2737,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2757,8 +2757,8 @@
         "category": "restaurant",
         "terrace": "sidewalk",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Architecture, Activity."
       }
     },
     {
@@ -2777,8 +2777,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2797,8 +2797,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2817,8 +2817,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Boundaries, Furniture."
       }
     },
     {
@@ -2837,8 +2837,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Activity."
       }
     },
     {
@@ -2857,8 +2857,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Protection, Furniture."
       }
     },
     {
@@ -2877,8 +2877,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2897,8 +2897,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2917,8 +2917,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries, Activity."
       }
     },
     {
@@ -2937,8 +2937,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2958,7 +2958,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -2977,8 +2977,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -2997,8 +2997,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3017,8 +3017,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Furniture, Activity."
       }
     },
     {
@@ -3037,8 +3037,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Furniture, Protection."
       }
     },
     {
@@ -3058,7 +3058,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3077,8 +3077,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3097,8 +3097,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3117,8 +3117,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3137,8 +3137,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Furniture, Architecture."
       }
     },
     {
@@ -3157,8 +3157,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Furniture."
       }
     },
     {
@@ -3177,8 +3177,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3197,8 +3197,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries."
       }
     },
     {
@@ -3217,8 +3217,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3238,7 +3238,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3258,7 +3258,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3277,8 +3277,8 @@
         "category": "restaurant",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Architecture, Protection."
       }
     },
     {
@@ -3297,8 +3297,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3317,8 +3317,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3338,7 +3338,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3357,8 +3357,8 @@
         "category": "restaurant",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Furniture."
       }
     },
     {
@@ -3377,8 +3377,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Boundaries."
       }
     },
     {
@@ -3397,8 +3397,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Architecture, Protection."
       }
     },
     {
@@ -3417,8 +3417,8 @@
         "category": "restaurant",
         "terrace": "pedestrian_zone",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Protection."
       }
     },
     {
@@ -3437,8 +3437,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Protection."
       }
     },
     {
@@ -3458,7 +3458,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3477,8 +3477,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Architecture, Boundaries."
       }
     },
     {
@@ -3498,7 +3498,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3518,7 +3518,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Activity. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3538,7 +3538,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Furniture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3558,7 +3558,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3577,8 +3577,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Boundaries."
       }
     },
     {
@@ -3597,8 +3597,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3618,7 +3618,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3637,8 +3637,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Furniture, Architecture, Boundaries."
       }
     },
     {
@@ -3658,7 +3658,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3677,8 +3677,8 @@
         "category": "restaurant",
         "terrace": "terrace",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Boundaries."
       }
     },
     {
@@ -3697,8 +3697,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3717,8 +3717,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Furniture."
       }
     },
     {
@@ -3737,8 +3737,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3758,7 +3758,7 @@
         "terrace": "yes",
         "terrace_confirmed": true,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Boundaries. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3777,8 +3777,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Protection."
       }
     },
     {
@@ -3797,8 +3797,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Protection."
       }
     },
     {
@@ -3817,8 +3817,8 @@
         "category": "restaurant",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Boundaries, Architecture, Protection."
       }
     },
     {
@@ -3838,7 +3838,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Protection. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3857,8 +3857,8 @@
         "category": "bar_cafe",
         "terrace": "sidewalk",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Activity, Architecture."
       }
     },
     {
@@ -3878,7 +3878,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3897,8 +3897,8 @@
         "category": "bar_cafe",
         "terrace": null,
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "CONFIRM\u00c9",
+        "visual_reason": "Confirmed terrace based on markers: Protection, Furniture."
       }
     },
     {
@@ -3918,7 +3918,7 @@
         "terrace": null,
         "terrace_confirmed": false,
         "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_reason": "Ambiguous: only found Architecture. Not enough evidence for a full terrace."
       }
     },
     {
@@ -3937,8 +3937,8 @@
         "category": "bar_cafe",
         "terrace": "no",
         "terrace_confirmed": false,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {
@@ -3957,8 +3957,8 @@
         "category": "bar_cafe",
         "terrace": "yes",
         "terrace_confirmed": true,
-        "visual_verdict": "SOUCONTE",
-        "visual_reason": "Visuals unclear or ambiguous."
+        "visual_verdict": "ABSENT",
+        "visual_reason": "No terrace markers detected. Photos show a closed facade or indoor-only setup."
       }
     },
     {

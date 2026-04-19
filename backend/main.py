@@ -13,6 +13,7 @@ from .reports import (
     submit_report,
     list_reports,
     close_report,
+    apply_report,
     check_admin,
 )
 
@@ -77,6 +78,12 @@ def api_reports(token: str = Query(...)):
 def api_close_report(number: int, token: str = Query(...), reason: str = "rejected"):
     check_admin(token)
     return close_report(number, reason)
+
+
+@app.post("/api/reports/{number}/apply")
+def api_apply_report(number: int, token: str = Query(...)):
+    check_admin(token)
+    return apply_report(number)
 
 
 @app.get("/")

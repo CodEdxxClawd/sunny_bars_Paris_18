@@ -21,6 +21,7 @@
   .btn { font-size: 12px; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,0,0,.1); background: #fff; cursor: pointer; color: #2b2f38; text-decoration: none; display: inline-block; }
   .btn:hover { background: #faf6ea; }
   .btn.close { background: #fff3f3; border-color: #f3c2c2; color: #7a0000; }
+  .btn.apply { background: #e4f0dc; border-color: #b7d39a; color: #2e5a1c; font-weight: 600; }
   #status { color: #6b7280; font-size: 13px; padding: 12px 0; }
   .empty { color: #6b7280; font-size: 13px; padding: 20px; text-align: center; background: #fff; border-radius: 10px; }
 </style>
@@ -61,16 +62,36 @@ function render(reports) {
     const kindLabel = (r.labels || []).find(l => l.startsWith('no-')) || '';
     const tag = kindLabel ? `<span class="tag ${kindLabel}">${r.kind}</span>` : '';
     const date = new Date(r.created_at).toLocaleString('fr-FR', { dateStyle: 'short', timeStyle: 'short' });
+    const applyBtn = kindLabel === 'no-terrace'
+      ? `<button class="btn apply" data-num="${r.number}">appliquer (supprimer le bar)</button>` : '';
     return `<div class="card">
       <h3>${tag}${escapeHtml(r.title.replace(/^\[report\]\s*/, ''))}</h3>
       <div class="meta">#${r.number} · ${date}</div>
       <pre>${escapeHtml(r.body || '')}</pre>
       <div class="actions">
         <a class="btn" href="${r.html_url}" target="_blank" rel="noopener">voir sur GitHub</a>
+        ${applyBtn}
         <button class="btn close" data-num="${r.number}">clore (rejeté)</button>
       </div>
     </div>`;
   }).join('');
+  listEl.querySelectorAll('.btn.apply').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!confirm('Supprimer ce bar de la carte et clore le rapport ?\n\n(après succès, fais un Factory rebuild du Space pour recharger les données)')) return;
+      btn.disabled = true;
+      btn.textContent = 'application…';
+      try {
+        const r = await fetch(`/api/reports/${btn.dataset.num}/apply?token=${encodeURIComponent(token)}`, { method: 'POST' });
+        if (!r.ok) throw new Error(`HTTP ${r.status} ${await r.text()}`);
+        alert('✓ bar supprimé du geojson et issue fermée.\nFactory rebuild le Space pour voir le changement sur la carte.');
+        load();
+      } catch (e) {
+        alert('erreur : ' + e.message);
+        btn.disabled = false;
+        btn.textContent = 'appliquer (supprimer le bar)';
+      }
+    });
+  });
   listEl.querySelectorAll('.btn.close').forEach(btn => {
     btn.addEventListener('click', async () => {
       if (!confirm('Clore ce rapport comme rejeté ?')) return;

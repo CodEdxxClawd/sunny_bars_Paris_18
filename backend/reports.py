@@ -135,7 +135,7 @@ def _extract_bar_id(body: str) -> str | None:
     return m.group(1) if m else None
 
 
-def apply_report(number: int) -> dict:
+def apply_report(number: int, actor: str = "") -> dict:
     """Fetches issue, removes feature matching bar_id from the geojson, commits, closes issue."""
     token, repo = _cfg()
     issue = _get_issue(number)
@@ -166,11 +166,13 @@ def apply_report(number: int) -> dict:
         raise HTTPException(404, f"feature {bar_id} introuvable dans {GEOJSON_PATH}")
 
     new_content = json.dumps(data, ensure_ascii=True, indent=2) + "\n"
+    actor = (actor or "").strip()[:80]
+    msg_suffix = f" (by {actor})" if actor else ""
     put = requests.put(
         f"{GITHUB_API}/repos/{repo}/contents/{GEOJSON_PATH}",
         headers=_gh_headers(token),
         json={
-            "message": f"remove {bar_id} via report #{number}",
+            "message": f"remove {bar_id} via report #{number}{msg_suffix}",
             "content": base64.b64encode(new_content.encode("utf-8")).decode("ascii"),
             "sha": sha,
         },
@@ -183,7 +185,7 @@ def apply_report(number: int) -> dict:
     requests.post(
         f"{GITHUB_API}/repos/{repo}/issues/{number}/comments",
         headers=_gh_headers(token),
-        json={"body": f"appliqué via admin dashboard (feature `{bar_id}` retirée)"},
+        json={"body": f"appliqué via admin dashboard (feature `{bar_id}` retirée){msg_suffix}"},
         timeout=10,
     )
     close = requests.patch(

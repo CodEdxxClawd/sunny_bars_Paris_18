@@ -81,9 +81,9 @@ def api_close_report(number: int, token: str = Query(...), reason: str = "reject
 
 
 @app.post("/api/reports/{number}/apply")
-def api_apply_report(number: int, token: str = Query(...)):
+def api_apply_report(number: int, token: str = Query(...), actor: str = ""):
     check_admin(token)
-    return apply_report(number)
+    return apply_report(number, actor)
 
 
 @app.get("/")

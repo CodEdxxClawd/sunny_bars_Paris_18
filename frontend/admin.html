@@ -77,11 +77,14 @@ function render(reports) {
   }).join('');
   listEl.querySelectorAll('.btn.apply').forEach(btn => {
     btn.addEventListener('click', async () => {
-      if (!confirm('Supprimer ce bar de la carte et clore le rapport ?\n\n(après succès, fais un Factory rebuild du Space pour recharger les données)')) return;
+      const actor = (prompt('Ton nom (pour le log du commit) ?', localStorage.getItem('admin_actor') || '') || '').trim();
+      if (!actor) return;
+      localStorage.setItem('admin_actor', actor);
+      if (!confirm(`Supprimer ce bar de la carte et clore le rapport (par ${actor}) ?\n\n(après succès, fais un Factory rebuild du Space pour recharger les données)`)) return;
       btn.disabled = true;
       btn.textContent = 'application…';
       try {
-        const r = await fetch(`/api/reports/${btn.dataset.num}/apply?token=${encodeURIComponent(token)}`, { method: 'POST' });
+        const r = await fetch(`/api/reports/${btn.dataset.num}/apply?token=${encodeURIComponent(token)}&actor=${encodeURIComponent(actor)}`, { method: 'POST' });
         if (!r.ok) throw new Error(`HTTP ${r.status} ${await r.text()}`);
         alert('✓ bar supprimé du geojson et issue fermée.\nFactory rebuild le Space pour voir le changement sur la carte.');
         load();

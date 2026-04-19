@@ -1,3 +1,13 @@
+---
+title: Sunny Bars Paris 18
+emoji: ☀️
+colorFrom: yellow
+colorTo: orange
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Sunny Bars — 18e
 
 Trouve les bars dont la terrasse est au soleil à une heure donnée.

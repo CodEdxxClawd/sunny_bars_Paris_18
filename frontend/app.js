@@ -464,6 +464,19 @@ suggestBox.addEventListener('mousedown', (e) => {
 
 map.on('load', () => { setNow(); });
 
+// Legend collapse/expand on mobile
+(function setupLegend() {
+  if (!window.matchMedia('(max-width: 640px)').matches) return;
+  const legend = document.querySelector('.legend');
+  if (!legend) return;
+  legend.addEventListener('click', () => legend.classList.toggle('open'));
+  document.addEventListener('click', (e) => {
+    if (!legend.contains(e.target) && legend.classList.contains('open')) {
+      legend.classList.remove('open');
+    }
+  });
+})();
+
 // --- Mobile bar-sheet (popup alternative) ---
 function openBarSheet(b) {
   const sheet = document.getElementById('barSheet');

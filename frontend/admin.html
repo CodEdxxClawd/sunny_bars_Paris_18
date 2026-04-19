@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sunny Bars — admin</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; color: #2b2f38; background: #faf7f0; margin: 0; padding: 24px; max-width: 880px; margin-inline: auto; }
+  h1 { font-size: 20px; margin: 0 0 6px; }
+  .hint { font-size: 13px; color: #6b7280; margin-bottom: 20px; line-height: 1.5; background: #fff7dc; padding: 10px 14px; border-radius: 10px; border: 1px solid #f1e5a8; }
+  #list { display: flex; flex-direction: column; gap: 10px; }
+  .card { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 14px 16px; box-shadow: 0 2px 6px rgba(0,0,0,.04); }
+  .card h3 { margin: 0 0 6px; font-size: 14px; }
+  .card .meta { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+  .card pre { background: #f6f3ea; padding: 8px 10px; border-radius: 6px; font-size: 11px; overflow-x: auto; white-space: pre-wrap; color: #444; }
+  .tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 999px; background: #fde3cc; color: #8a4a10; margin-right: 6px; text-transform: uppercase; letter-spacing: .04em; }
+  .tag.no-terrace { background: #f7d3d3; color: #7a0000; }
+  .tag.no-sun-permanent { background: #e4e3f0; color: #2e3f6b; }
+  .tag.no-sun-temporary { background: #fde3cc; color: #8a4a10; }
+  .actions { display: flex; gap: 8px; margin-top: 10px; }
+  .btn { font-size: 12px; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,0,0,.1); background: #fff; cursor: pointer; color: #2b2f38; text-decoration: none; display: inline-block; }
+  .btn:hover { background: #faf6ea; }
+  .btn.close { background: #fff3f3; border-color: #f3c2c2; color: #7a0000; }
+  #status { color: #6b7280; font-size: 13px; padding: 12px 0; }
+  .empty { color: #6b7280; font-size: 13px; padding: 20px; text-align: center; background: #fff; border-radius: 10px; }
+</style>
+</head>
+<body>
+<h1>☀️ Sunny Bars — admin</h1>
+<div class="hint">
+  Pour <b>appliquer</b> un rapport : édite <code>data/bars_18e.geojson</code> sur GitHub directement (ex. retirer le bar, changer <code>terrace_confirmed</code>), commit, puis clos l'issue ici. Pour <b>rejeter</b> : clic "clore (rejeté)".
+</div>
+<div id="status">chargement…</div>
+<div id="list"></div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const token = params.get('token') || '';
+const statusEl = document.getElementById('status');
+const listEl = document.getElementById('list');
+
+async function load() {
+  statusEl.textContent = 'chargement…';
+  try {
+    const r = await fetch('/api/reports?token=' + encodeURIComponent(token));
+    if (!r.ok) throw new Error(`HTTP ${r.status} ${await r.text()}`);
+    const reports = await r.json();
+    render(reports);
+  } catch (e) {
+    statusEl.textContent = 'erreur : ' + e.message;
+  }
+}
+
+function render(reports) {
+  statusEl.textContent = `${reports.length} rapport${reports.length > 1 ? 's' : ''} ouvert${reports.length > 1 ? 's' : ''}`;
+  if (!reports.length) {
+    listEl.innerHTML = '<div class="empty">Aucun rapport ouvert.</div>';
+    return;
+  }
+  listEl.innerHTML = reports.map(r => {
+    const kindLabel = (r.labels || []).find(l => l.startsWith('no-')) || '';
+    const tag = kindLabel ? `<span class="tag ${kindLabel}">${r.kind}</span>` : '';
+    const date = new Date(r.created_at).toLocaleString('fr-FR', { dateStyle: 'short', timeStyle: 'short' });
+    return `<div class="card">
+      <h3>${tag}${escapeHtml(r.title.replace(/^\[report\]\s*/, ''))}</h3>
+      <div class="meta">#${r.number} · ${date}</div>
+      <pre>${escapeHtml(r.body || '')}</pre>
+      <div class="actions">
+        <a class="btn" href="${r.html_url}" target="_blank" rel="noopener">voir sur GitHub</a>
+        <button class="btn close" data-num="${r.number}">clore (rejeté)</button>
+      </div>
+    </div>`;
+  }).join('');
+  listEl.querySelectorAll('.btn.close').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!confirm('Clore ce rapport comme rejeté ?')) return;
+      btn.disabled = true;
+      btn.textContent = 'fermeture…';
+      try {
+        const r = await fetch(`/api/reports/${btn.dataset.num}/close?token=${encodeURIComponent(token)}`, { method: 'POST' });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        load();
+      } catch (e) {
+        alert('erreur : ' + e.message);
+        btn.disabled = false;
+        btn.textContent = 'clore (rejeté)';
+      }
+    });
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+load();
+</script>
+</body>
+</html>

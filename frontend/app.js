@@ -103,6 +103,7 @@ map.on('load', () => {
       .setLngLat([b.lon, b.lat])
       .setHTML(popupHTML(b, null))
       .addTo(map);
+    wireReportForm(popup, b);
     hydratePopup(popup, b);
   });
   map.on('mouseenter', 'bars-dot', () => { map.getCanvas().style.cursor = 'pointer'; });
@@ -166,14 +167,104 @@ function popupHTML(b, forecast) {
     body = `<div class="popup-note">${msg}</div>`;
   }
 
-  return `<div class="popup-card">
+  const alreadyReported = localStorage.getItem('reported:' + b.id);
+  const footer = alreadyReported
+    ? `<div class="popup-footer muted">✓ signalé</div>`
+    : `<div class="popup-footer"><a href="#" class="report-link" data-bar-id="${b.id}">signaler une erreur</a></div>`;
+
+  return `<div class="popup-card" data-bar-id="${b.id}">
     <div class="popup-head">
       <div class="popup-title">${name} ${stabBadge}</div>
       <div class="popup-badge">${badge}</div>
     </div>
     <div class="popup-meta">${tLabel} · ${cLabel}</div>
     ${body}
+    ${footer}
   </div>`;
+}
+
+function reportFormHTML(b) {
+  const name = b.name || '(sans nom)';
+  return `<div class="popup-card report-form" data-bar-id="${b.id}">
+    <div class="popup-head">
+      <div class="popup-title">Signaler — ${name}</div>
+    </div>
+    <div class="report-body">
+      <label class="rf-radio"><input type="radio" name="rtype" value="no_terrace"> Pas de terrasse ici</label>
+      <label class="rf-radio"><input type="radio" name="rtype" value="no_sun"> Pas de soleil ici</label>
+      <div class="rf-sub" hidden>
+        <label class="rf-radio"><input type="radio" name="rsub" value="no_sun_temporary"> Ponctuel <span class="rf-hint">parasol, travaux…</span></label>
+        <label class="rf-radio"><input type="radio" name="rsub" value="no_sun_permanent"> Permanent <span class="rf-hint">arbre, bâtiment…</span></label>
+      </div>
+      <div class="rf-actions">
+        <button class="rf-cancel" type="button">annuler</button>
+        <button class="rf-submit" type="button" disabled>envoyer</button>
+      </div>
+      <div class="rf-status"></div>
+    </div>
+  </div>`;
+}
+
+function wireReportForm(popup, b) {
+  const root = popup.getElement();
+  const link = root.querySelector('.report-link');
+  if (link) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      popup.setHTML(reportFormHTML(b));
+      wireReportForm(popup, b);
+    });
+    return;
+  }
+  const form = root.querySelector('.report-form');
+  if (!form) return;
+  const sub = form.querySelector('.rf-sub');
+  const submitBtn = form.querySelector('.rf-submit');
+  const cancelBtn = form.querySelector('.rf-cancel');
+  const status = form.querySelector('.rf-status');
+
+  function computeType() {
+    const top = form.querySelector('input[name="rtype"]:checked')?.value;
+    if (!top) return null;
+    if (top === 'no_terrace') return 'no_terrace';
+    return form.querySelector('input[name="rsub"]:checked')?.value || null;
+  }
+  function refresh() {
+    const top = form.querySelector('input[name="rtype"]:checked')?.value;
+    sub.hidden = (top !== 'no_sun');
+    submitBtn.disabled = !computeType();
+  }
+  form.querySelectorAll('input[type="radio"]').forEach(r => r.addEventListener('change', refresh));
+
+  cancelBtn.addEventListener('click', () => {
+    popup.setHTML(popupHTML(b, popup._forecast || null));
+    wireReportForm(popup, b);
+  });
+
+  submitBtn.addEventListener('click', async () => {
+    const t = computeType();
+    if (!t) return;
+    submitBtn.disabled = true;
+    status.textContent = 'envoi…';
+    status.className = 'rf-status';
+    try {
+      const r = await fetch('/report', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ bar_id: b.id, type: t, datetime: whenInput.value }),
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.detail || `HTTP ${r.status}`);
+      localStorage.setItem('reported:' + b.id, '1');
+      status.textContent = '✓ merci, ça aide à améliorer le site';
+      status.className = 'rf-status ok';
+      setTimeout(() => popup.remove(), 1800);
+    } catch (err) {
+      status.textContent = 'erreur : ' + err.message;
+      status.className = 'rf-status err';
+      submitBtn.disabled = false;
+    }
+  });
 }
 
 async function hydratePopup(popup, b) {
@@ -181,7 +272,11 @@ async function hydratePopup(popup, b) {
     const r = await fetch(`/forecast?id=${encodeURIComponent(b.id)}&datetime=${encodeURIComponent(whenInput.value)}`);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const f = await r.json();
-    if (popup.isOpen()) popup.setHTML(popupHTML(b, f));
+    popup._forecast = f;
+    if (popup.isOpen()) {
+      popup.setHTML(popupHTML(b, f));
+      wireReportForm(popup, b);
+    }
   } catch (err) {
     if (popup.isOpen()) {
       popup.setHTML(`<div class="popup-card"><div class="popup-head"><div class="popup-title">${b.name||'(sans nom)'}</div></div><div class="popup-note">erreur : ${err.message}</div></div>`);

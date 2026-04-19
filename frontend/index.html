@@ -92,7 +92,7 @@
     vertical-align: -1px; margin-right: 7px;
     box-shadow: 0 0 0 2px #fff;
   }
-  .legend .sw.dash { box-shadow: 0 0 0 2px rgba(255,255,255,.7); opacity: .7; }
+  .legend .sw.ring { background: transparent !important; border: 2px solid #f5b700; box-shadow: none; width: 10px; height: 10px; }
 
   /* Popup premium */
   .maplibregl-popup.popup-premium .maplibregl-popup-tip { border-top-color: #fff; }
@@ -144,9 +144,9 @@
 <div class="legend">
   <div><span class="sw" style="background:#f5b700"></span>terrasse confirmée, au soleil</div>
   <div><span class="sw" style="background:#4a5b6b"></span>terrasse confirmée, à l'ombre</div>
-  <div><span class="sw dash" style="background:#f5b700"></span>terrasse probable (non taguée)</div>
+  <div><span class="sw ring"></span>terrasse probable (non taguée)</div>
 </div>
 <script src="/static/vendor/maplibre-gl.js?v=5"></script>
-<script src="/static/app.js?v=12"></script>
+<script src="/static/app.js?v=13"></script>
 </body>
 </html>

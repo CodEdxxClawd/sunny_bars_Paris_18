@@ -1,0 +1,363 @@
+Bar: La Pétaudière | ID: node/253007445 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: 25° Est | ID: node/294266518 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Jupi | ID: node/305903404 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture, Activity.
+Bar: Lush | ID: node/305903405 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries.
+Bar: Giulia | ID: node/305903407 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Boundaries.
+Bar: Le Bar Belge | ID: node/305903408 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Les Caves Populaires | ID: node/305903409 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Just BE | ID: node/305949888 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Nawab | ID: node/305951215 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Café Biergit | ID: node/306154412 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection.
+Bar: Le Refuge des Fondus | ID: node/308007587 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries, Furniture.
+Bar: Le Diplomate | ID: node/309974648 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Krishna Bhavan | ID: node/324192389 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: Brasserie Wepler | ID: node/408952534 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Café des 2 Moulins | ID: node/408952536 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture.
+Bar: Le Basilic | ID: node/408956768 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: La Cidrerie Des Batignolles | ID: node/463710796 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Galette du Moulin | ID: node/497348562 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Adn Montmartre | ID: node/498913739 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries.
+Bar: L'Été en Pente Douce | ID: node/534660987 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Au Bercail | ID: node/534660992 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Au Soleil de la Butte | ID: node/534660995 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Cépage Montmartrois | ID: node/540663896 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Pinettes | ID: node/565052804 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Dame | ID: node/571429770 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Championnet | ID: node/599956164 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: La Karambole | ID: node/629665565 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries, Architecture.
+Bar: Wassana | ID: node/629702270 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture, Protection.
+Bar: L'Avenue | ID: node/637464406 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Au Rendez-Vous des Amis | ID: node/653878922 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture.
+Bar: La Renaissance | ID: node/669803007 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: L'oasis 244 | ID: node/735171891 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Tokioyaki | ID: node/735171919 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection, Activity.
+Bar: Les Artistes du Faubourg | ID: node/735171923 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: Restaurant Royal Pokhara | ID: node/735171925 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: Bistrot Lafayette | ID: node/735172006 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection.
+Bar: Cristal Bar | ID: node/735172024 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Furniture.
+Bar: Le Jaurès | ID: node/735361060 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Metro Bar | ID: node/735462834 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture, Furniture.
+Bar: Hippopotamus | ID: node/819866089 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: Juste Le Zinc | ID: node/819866381 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Léon | ID: node/821879344 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture, Protection.
+Bar: Indiana Café | ID: node/821879351 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Petit Poucet | ID: node/821886212 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Étoile du Kashmir | ID: node/821902041 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity, Architecture.
+Bar: Mademoiselle Raymonde | ID: node/844531907 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Indian Taste | ID: node/877958892 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Himalayan Momo | ID: node/877958897 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Boundaries.
+Bar: Bharath | ID: node/877958898 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Rotonde | ID: node/877959052 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: La Rame | ID: node/879276212 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Thensurabi | ID: node/879643697 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Cyclone | ID: node/880529519 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection.
+Bar: La Bulle | ID: node/881969027 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le Clairon Gourmand | ID: node/895570206 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: El Tequila Mexicana | ID: node/897207151 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Chantoiseau | ID: node/914748066 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Café Leon | ID: node/916588773 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Zaitoun (Léa Beyrouth) | ID: node/917438783 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: La Guincheuse | ID: node/917438849 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Le Point Ephémère | ID: node/921881553 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection.
+Bar: Rita | ID: node/985435188 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: Oishii | ID: node/990384075 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture, Boundaries.
+Bar: TTown | ID: node/990384086 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: La Royale | ID: node/997919835 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Les 3 Frères | ID: node/1015830169 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Navel | ID: node/1015830973 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Furniture.
+Bar: Au rendez-vous des chauffeurs | ID: node/1035711035 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: La Coupole | ID: node/1035711050 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Angkor | ID: node/1035728774 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Furniture.
+Bar: Kbio Foods | ID: node/1035778113 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Architecture.
+Bar: O'Parc | ID: node/1035778132 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: (sans nom) | ID: node/1035787952 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Qooto Qooto Resto | ID: node/1045054743 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Café Caché | ID: node/1045581368 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Nord Nord | ID: node/1046316249 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity, Architecture.
+Bar: (sans nom) | ID: node/1068630302 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Devotion Café | ID: node/1102552605 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries.
+Bar: Le Montmartre | ID: node/1165762461 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Istanbul Grill | ID: node/1181374937 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture, Activity.
+Bar: Sakura Sushi | ID: node/1211150598 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Ruisseau | ID: node/1229535476 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Vincenzo | ID: node/1234196514 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Protection.
+Bar: La Riposte restaurant | ID: node/1234196682 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Chez Pino | ID: node/1234207142 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Perception | ID: node/1234207296 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection.
+Bar: Pizzou | ID: node/1234207474 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: Les Petites Flèches | ID: node/1234207497 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Crêperie Pen-ty | ID: node/1234207512 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries, Furniture.
+Bar: Le Lipstick | ID: node/1235164067 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture, Activity.
+Bar: Sister Midnight | ID: node/1235238111 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Le Chouf | ID: node/1236518874 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Au Rendez-Vous des Artistes | ID: node/1236682811 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Activity.
+Bar: Le Piano Perché | ID: node/1242991243 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture.
+Bar: La Mascotte Montmartre | ID: node/1242991244 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Villa des Abbesses | ID: node/1242991247 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Furniture, Protection.
+Bar: Café Bruant | ID: node/1242991249 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture, Architecture.
+Bar: La Bicyclette | ID: node/1243322704 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries, Activity.
+Bar: Starbucks | ID: node/1314241473 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture, Protection.
+Bar: Cacio e Pepe | ID: node/1326677896 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Au Roi du Café | ID: node/1401461536 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Pointe La Fayette | ID: node/1489177440 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection.
+Bar: La Rose Rouge | ID: node/1489177443 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le Formidable | ID: node/1489177444 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection, Boundaries.
+Bar: Le Conservatoire | ID: node/1489177449 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: Le Florent | ID: node/1489177451 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Le Taulier | ID: node/1489177454 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Activity.
+Bar: Adaggio | ID: node/1489177467 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries, Protection.
+Bar: Ambroise Paré | ID: node/1528612281 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Chez Irene et Bernard | ID: node/1574980708 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Boundaries.
+Bar: Le Voltigeur | ID: node/1574982593 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Boundaries.
+Bar: (sans nom) | ID: node/1595250086 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries.
+Bar: Le Padirac | ID: node/1595252875 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection, Boundaries.
+Bar: La Fourmi | ID: node/1616985541 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: La Francaise | ID: node/1618002590 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: Auberge du Bonheur | ID: node/1619521147 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Mama Africa | ID: node/1619521172 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: Point Bar | ID: node/1650160704 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Pulcinella | ID: node/1657948395 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Crème | ID: node/1657974487 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries.
+Bar: Les Carrières | ID: node/1657977654 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Pizza Caratello | ID: node/1666054488 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries.
+Bar: Patakrep | ID: node/1667560925 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Village | ID: node/1667562696 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection, Activity.
+Bar: Le Diplomate | ID: node/1667563844 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: La Timbale | ID: node/1667567942 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le Petit Joseph | ID: node/1667577644 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Simplon | ID: node/1667577648 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Reinitas | ID: node/1668675883 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Jolis Mômes 18Ème | ID: node/1668686161 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Dionis | ID: node/1668711668 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection.
+Bar: (sans nom) | ID: node/1668713289 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Oriental | ID: node/1668715840 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity.
+Bar: Nonna Clelia | ID: node/1668721943 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: La Chingada | ID: node/1668724955 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity, Boundaries.
+Bar: Doppio | ID: node/1668732887 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: Pasticcio | ID: node/1668733595 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: B&J | ID: node/1668734336 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries, Protection.
+Bar: Le Bénin | ID: node/1668734745 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture.
+Bar: Le Flash | ID: node/1668766274 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Kap thai | ID: node/1668780081 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Haifa | ID: node/1668781071 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: Café Poteau | ID: node/1668852308 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Piscine | ID: node/1669016557 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Dix Sur Dix | ID: node/1669017990 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries, Architecture.
+Bar: Le Rallye | ID: node/1674855139 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Lescargot | ID: node/1674934463 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: Bistrot le Sainte-Isaure | ID: node/1674935278 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture, Boundaries.
+Bar: Nord-Sud | ID: node/1674941085 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Africa Grill | ID: node/1674952998 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection, Architecture.
+Bar: Amore da Francesca | ID: node/1674955048 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection.
+Bar: Chez Gaston | ID: node/1679463071 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Le Provencial | ID: node/1679463986 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture.
+Bar: L'Adriatique | ID: node/1679467252 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection, Activity.
+Bar: Aux Rendez-Vous des Amis | ID: node/1679470399 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection.
+Bar: Le Bar Commun | ID: node/1679482210 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: L’Omadys | ID: node/1702449830 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: The Tibetan Kitchen | ID: node/1706225572 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Tin Tin | ID: node/1706235999 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Babalou | ID: node/1721884559 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity, Boundaries.
+Bar: Hope Café | ID: node/1725567118 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Cabanon de la Butte | ID: node/1725571311 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Relais de la Butte | ID: node/1741247144 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Saint-Jean | ID: node/1741253764 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Le Vrai Paris | ID: node/1741254171 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Protection.
+Bar: Au Petit Montmartre | ID: node/1741258648 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection.
+Bar: Bistro 27 | ID: node/1765229208 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Furniture, Boundaries.
+Bar: Kim | ID: node/1765229211 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture, Activity.
+Bar: Chez Lucette | ID: node/1784619141 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: Portobello | ID: node/1791412478 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries, Activity.
+Bar: Au Cadet De Gascogne | ID: node/1791641575 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity.
+Bar: Mangioni | ID: node/1803957302 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture.
+Bar: Le Christophe Colomb | ID: node/1812646130 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Aroï | ID: node/1823551357 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Protection.
+Bar: Chez Papa | ID: node/1823551361 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Le Bistro des Galopins | ID: node/1823551364 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Parme Clichy | ID: node/1823551400 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: L'Ascension | ID: node/1823551408 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity.
+Bar: The Coq & Bulldog | ID: node/1823551410 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity.
+Bar: Le Déjeuner sur l'Herbe | ID: node/1823551413 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Petit Moulin | ID: node/1865299715 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Autour du Moulin | ID: node/1865299716 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Chinon | ID: node/1865299718 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries.
+Bar: Tentazioni | ID: node/1865299720 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection.
+Bar: Café Burq | ID: node/1865299721 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: L'instant | ID: node/1867384174 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries.
+Bar: La Carotte Bleue | ID: node/1867397539 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture, Activity.
+Bar: Au fin faim | ID: node/1867428325 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Café Le Troquet | ID: node/1867431078 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Restaurant Sidi Rached | ID: node/1868467393 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries.
+Bar: Nirvana Dream | ID: node/1868643475 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Alibi | ID: node/1869060190 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: No Problemo | ID: node/1869850882 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Collines d'Asie | ID: node/1869857245 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries.
+Bar: La Scrampia | ID: node/1872840250 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Boundaries, Activity.
+Bar: Professor Wings | ID: node/1872840266 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection.
+Bar: Rajah Café | ID: node/1872840272 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity.
+Bar: Clichy's Tavern | ID: node/1875819752 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture, Boundaries.
+Bar: Bel-Ami | ID: node/1875831351 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries, Architecture.
+Bar: Royal Custine | ID: node/1876145231 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Ganesha Corner | ID: node/1876323280 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: All Good Things Paris | ID: node/1877310786 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Boundaries, Activity.
+Bar: Francis Labutte | ID: node/1877343572 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Café Francœur | ID: node/1877343722 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity.
+Bar: Le Bouclard | ID: node/1877443643 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: L'Étoile de Montmartre | ID: node/1877475420 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity.
+Bar: Flunch | ID: node/1877521427 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: La Terrasse | ID: node/1877647088 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Architecture.
+Bar: Pizzeria | ID: node/1896094212 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection, Furniture.
+Bar: Le Sultan - Salon de thé-Chicha | ID: node/1896097719 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Edo | ID: node/1896099864 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries, Furniture.
+Bar: La Renaissance | ID: node/1896104342 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Activity, Furniture.
+Bar: Café pastis | ID: node/1896122217 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Café de la Poste | ID: node/1896127602 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Dauphin | ID: node/1896131267 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Mayday | ID: node/1896148527 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: (sans nom) | ID: node/1896163367 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Le Clignancourt | ID: node/1896172332 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Maison Royale | ID: node/1896179425 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Stéphanois | ID: node/1896179669 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture, Activity.
+Bar: Chez Clara | ID: node/1896234388 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le Fontenoy | ID: node/1896234483 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Mascotte | ID: node/1896243268 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Bordier num num | ID: node/1896260584 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Chiyoda | ID: node/1896283672 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: La Locanda di Pulcinella | ID: node/1896325529 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Activity.
+Bar: Le 975 | ID: node/1896352723 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection, Activity.
+Bar: Délices et saveurs | ID: node/1896371545 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Architecture.
+Bar: Le Vizir | ID: node/1896376768 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity.
+Bar: La Maison Rose | ID: node/1904540725 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture.
+Bar: (sans nom) | ID: node/1909186940 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: (sans nom) | ID: node/1909187152 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Chez Pradel | ID: node/1909235653 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Pathya | ID: node/1909251826 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: L'astrolabe 18 | ID: node/1909254294 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Boundaries.
+Bar: Le Celtic | ID: node/1909297635 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture, Protection.
+Bar: Miyazaki | ID: node/1909834932 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le 119 | ID: node/1909836168 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Jade | ID: node/1909836698 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: (sans nom) | ID: node/1909836883 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity, Protection.
+Bar: Chez soi | ID: node/1909838773 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Anjou | ID: node/1909862522 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture, Activity.
+Bar: Sara's Kitchen | ID: node/1909863030 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture.
+Bar: Les Petits Cons' | ID: node/1916353373 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries, Activity.
+Bar: Acá | ID: node/1919226716 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Maison Pinsa | ID: node/1919227554 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Vache et Le Cuisinier | ID: node/1920884233 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity, Protection.
+Bar: Café Chappe | ID: node/1920885246 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Bimbo | ID: node/1920885247 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: La Cave Café | ID: node/1927627184 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection.
+Bar: L’Étranger | ID: node/1941555013 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Bar du Métro | ID: node/2000813093 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture.
+Bar: La Cantine de la Cigale | ID: node/2038629581 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Patakrep | ID: node/2082397959 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Absurde Imposture | ID: node/2087542131 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: Aji Ramen | ID: node/2139915871 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Japikeo | ID: node/2139915880 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le Relais Gascon | ID: node/2141357509 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: Sole di Sardegna | ID: node/2148901348 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Augustin | ID: node/2180084668 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture.
+Bar: Pho 68 | ID: node/2207469225 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Furniture.
+Bar: South Pigalle | ID: node/2242819125 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture.
+Bar: Joséphine | ID: node/2245381991 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity.
+Bar: Pajolini | ID: node/2245452103 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity.
+Bar: Le Blanco | ID: node/2247185908 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Furniture.
+Bar: Le Commerce | ID: node/2247185911 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: Le Monde de Léa | ID: node/2247185914 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection.
+Bar: E Ma Ho | ID: node/2247185920 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: Restaurant Locomotive | ID: node/2256214691 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: New Thai San | ID: node/2256214694 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity.
+Bar: Café de la Poste | ID: node/2258450453 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture.
+Bar: Quelli di la | ID: node/2258450459 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture, Activity.
+Bar: Eden Flower | ID: node/2267078074 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture.
+Bar: Triangle d'or | ID: node/2268459870 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Bon Couscous | ID: node/2268459882 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Boundaries, Architecture.
+Bar: L'Eterneel | ID: node/2268459926 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Protection.
+Bar: Délices du Mali | ID: node/2268459927 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Wako | ID: node/2270829888 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Chope | ID: node/2270829889 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: La Chope à Mou's | ID: node/2274029184 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Maloumarin | ID: node/2275170501 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity.
+Bar: Café de la Poste | ID: node/2279508873 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Hélène Café | ID: node/2279711294 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Bar-Tabac Le Bergerac | ID: node/2279711295 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Boundaries.
+Bar: Mian Dui Mian | ID: node/2279711302 | Verdict: SOUCONTE | Reason: Ambiguous: only found Furniture. Not enough evidence for a full terrace.
+Bar: Le refuge | ID: node/2283655494 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La bâche bleue | ID: node/2285154131 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Stop Chapelle | ID: node/2285154160 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Activity, Boundaries.
+Bar: Délice 18 | ID: node/2306504628 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Ayaan badan | ID: node/2306504629 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Allo Tandoori | ID: node/2310467202 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Ambassade | ID: node/2310467214 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Panda | ID: node/2310467218 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection, Furniture.
+Bar: Thaï 18 | ID: node/2310467220 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Le Pain Quotidien | ID: node/2312768102 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection.
+Bar: Le Veneto | ID: node/2317308530 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture, Furniture.
+Bar: Tout va Mieux | ID: node/2325915038 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection, Architecture.
+Bar: Le Môme | ID: node/2328281907 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Le Celtic | ID: node/2329855383 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture, Boundaries.
+Bar: En Vrac | ID: node/2333397301 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Sushi Ciel | ID: node/2333397315 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Boundaries, Protection.
+Bar: Le va et vient du Nord | ID: node/2345324858 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Grappe d'Or | ID: node/2345324859 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Protection, Boundaries.
+Bar: Le Mistral Gagnant | ID: node/2349337349 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Bistrot 38 | ID: node/2349345389 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity.
+Bar: La Belle Époque | ID: node/2349350818 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Au Baobab | ID: node/2349356972 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: Chez Aicha | ID: node/2350539140 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: À la Goutte d'Or | ID: node/2358422000 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Nemrod | ID: node/2358454956 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Capucin | ID: node/2358457326 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Chez Cyrille | ID: node/2358714324 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Le Pactole | ID: node/2358718956 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Provençal | ID: node/2361287649 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture.
+Bar: La Goutte Rouge | ID: node/2375148543 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Activity, Architecture.
+Bar: Sornettes | ID: node/2381421595 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: Le Sancerre | ID: node/2389937619 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: Chez Zeyna | ID: node/2394017308 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture, Furniture.
+Bar: Guilo Guilo | ID: node/2397031881 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Au Petit Rozey | ID: node/2405090461 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Furniture.
+Bar: L'Oxalys | ID: node/2406016122 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: Sourire de Saïgon | ID: node/2406017169 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Architecture, Furniture.
+Bar: Le Fontenoy | ID: node/2406019609 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture.
+Bar: Au Bon Coin | ID: node/2445876964 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture.
+Bar: Au Bon Coin | ID: node/2445876965 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Brasserie de la Goutte d'Or | ID: node/2461799896 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries.
+Bar: La Vieille Pie | ID: node/2463415975 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Furniture, Activity.
+Bar: Les Orgues | ID: node/2469001986 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Les Orgues | ID: node/2469003480 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection, Activity.
+Bar: Le Bistrot du Nord | ID: node/2469138456 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture.
+Bar: Café de la Gare | ID: node/2472600007 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Café Hébert | ID: node/2472600013 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Rotonde Hébertine | ID: node/2472600019 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Architecture, Protection.
+Bar: Corso | ID: node/2483387635 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Activity, Protection.
+Bar: Côté Soleil | ID: node/2483388470 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Jules Jo | ID: node/2494555629 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Bangou Lunch | ID: node/2502812285 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Protection, Furniture.
+Bar: La Vie est Belle | ID: node/2523656923 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Jasmin Café | ID: node/2523656924 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Côté Canal | ID: node/2535848629 | Verdict: SOUCONTE | Reason: Ambiguous: only found Activity. Not enough evidence for a full terrace.
+Bar: L'imprévu | ID: node/2536062861 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture.
+Bar: O'MoKa | ID: node/2536393039 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries, Furniture.
+Bar: Chez Lalla | ID: node/2555957191 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Refuge des Moines | ID: node/2557579588 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity, Boundaries.
+Bar: Le Petit Trianon | ID: node/2582207279 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Activity.
+Bar: Rossini | ID: node/2590139278 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'Olympic | ID: node/2623630915 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Le Petit Vélo | ID: node/2624677961 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: Le Vintimille | ID: node/2624677962 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Architecture, Boundaries.
+Bar: Le Valois | ID: node/2624677963 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries.
+Bar: Five Pizza | ID: node/2635358849 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries.
+Bar: La Dolce Vita | ID: node/2638419667 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Protection, Furniture, Architecture.
+Bar: Sekitan | ID: node/2650871422 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Furniture.
+Bar: Churrasco Galo | ID: node/2686660884 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: L'escale | ID: node/2696727064 | Verdict: SOUCONTE | Reason: Ambiguous: only found Boundaries. Not enough evidence for a full terrace.
+Bar: La Forêt Noire | ID: node/2696729883 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Furniture, Protection, Boundaries.
+Bar: Les deux Marches | ID: node/2696736610 | Verdict: ABSENT | Reason: No terrace markers detected. Photos show a closed facade or indoor-only setup.
+Bar: La Maison Thaï | ID: node/2702353802 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Boundaries, Architecture.
+Bar: Mandeeq | ID: node/2704908570 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Boundaries, Furniture.
+Bar: Sabor Latino | ID: node/2708996510 | Verdict: SOUCONTE | Reason: Ambiguous: only found Architecture. Not enough evidence for a full terrace.
+Bar: Le Carolus | ID: node/2756226765 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity, Boundaries.
+Bar: Les Merveilles Délice d'Afrique | ID: node/2773538950 | Verdict: SOUCONTE | Reason: Ambiguous: only found Protection. Not enough evidence for a full terrace.
+Bar: Yak Café | ID: node/2781160733 | Verdict: CONFIRMÉ | Reason: Confirmed terrace based on markers: Architecture, Activity, Boundaries.

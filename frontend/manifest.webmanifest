@@ -1,0 +1,20 @@
+{
+  "name": "Sunny Bars — 18e",
+  "short_name": "Sunny Bars",
+  "description": "Trouver un bar au soleil dans le 18e.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf7f0",
+  "theme_color": "#f5b700",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

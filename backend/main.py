@@ -86,6 +86,25 @@ def api_apply_report(number: int, token: str = Query(...), actor: str = ""):
     return apply_report(number, actor)
 
 
+@app.get("/manifest.webmanifest")
+def manifest():
+    return FileResponse(FRONTEND / "manifest.webmanifest", media_type="application/manifest+json")
+
+
+@app.get("/sw.js")
+def service_worker():
+    return FileResponse(
+        FRONTEND / "sw.js",
+        media_type="application/javascript",
+        headers={"Service-Worker-Allowed": "/", "Cache-Control": "no-cache"},
+    )
+
+
+@app.get("/icon.svg")
+def icon():
+    return FileResponse(FRONTEND / "icon.svg", media_type="image/svg+xml")
+
+
 @app.get("/")
 def root():
     return FileResponse(FRONTEND / "index.html")

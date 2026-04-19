@@ -130,6 +130,15 @@ class SunshineIndex:
                 if el > 1.0 and self.is_sunny(bar, az, el):
                     minutes_until = elapsed
                     break
+        stable = currently_sunny and (
+            capped or (minutes_left is not None and minutes_left >= 45)
+        )
+        shadow_at = None
+        if currently_sunny and minutes_left is not None and not capped:
+            shadow_at = (ts + timedelta(minutes=minutes_left)).isoformat()
+        sun_at = None
+        if not currently_sunny and minutes_until is not None:
+            sun_at = (ts + timedelta(minutes=minutes_until)).isoformat()
         return {
             "id": bar.id,
             "name": bar.name,
@@ -138,6 +147,9 @@ class SunshineIndex:
             "minutes_until_sunny": minutes_until,
             "capped": capped,
             "horizon_minutes": horizon_minutes,
+            "shadow_at": shadow_at,
+            "sun_at": sun_at,
+            "stable": stable,
         }
 
     def sun_position(self, when: datetime) -> tuple[float, float]:
@@ -175,11 +187,36 @@ class SunshineIndex:
                 return False
         return True
 
+    def _stability_check(self, bar: Bar, when: datetime,
+                         step_minutes: int = 15, threshold_minutes: int = 45) -> tuple[int, bool]:
+        """Mini-forecast borné au seuil. Retourne (minutes_left_jusqu'au_seuil, stable)."""
+        ts = pd.Timestamp(when)
+        if ts.tzinfo is None:
+            ts = ts.tz_localize(PARIS_TZ)
+        _, sunset = self.sunrise_sunset(ts.to_pydatetime())
+        step = timedelta(minutes=step_minutes)
+        max_steps = threshold_minutes // step_minutes
+        elapsed = 0
+        t = ts
+        for _ in range(max_steps):
+            t = t + step
+            if sunset is not None and t.to_pydatetime() >= sunset:
+                return elapsed, False
+            az, el = self.sun_position(t.to_pydatetime())
+            if el <= 1.0 or not self.is_sunny(bar, az, el):
+                return elapsed, False
+            elapsed += step_minutes
+        return elapsed, True
+
     def compute(self, when: datetime) -> list[dict]:
         az, elev = self.sun_position(when)
         out = []
         for bar in self.bars:
             sunny = self.is_sunny(bar, az, elev) if elev > 1.0 else False
+            minutes_left = None
+            stable = False
+            if sunny:
+                minutes_left, stable = self._stability_check(bar, when)
             out.append({
                 "id": bar.id,
                 "name": bar.name,
@@ -188,6 +225,8 @@ class SunshineIndex:
                 "sunny": sunny,
                 "terrace_confirmed": bar.terrace_confirmed,
                 "category": bar.category,
+                "minutes_left": minutes_left,
+                "stable": stable,
             })
         sr, ss = self.sunrise_sunset(when)
         return {

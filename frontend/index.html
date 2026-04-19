@@ -112,6 +112,10 @@
   .popup-hero-metric.shadow { color: var(--muted); }
   .popup-hero-label { font-size: 11px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: .06em; }
   .popup-note { padding: 10px 14px 14px; font-size: 12px; color: var(--muted); text-align: center; }
+  .popup-hero-sub { font-size: 11px; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .stab-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; text-transform: uppercase; letter-spacing: .04em; }
+  .stab-badge.stable { background: #e4f0dc; color: #3f6b2e; }
+  .stab-badge.fugace { background: #fde3cc; color: #8a4a10; }
 </style>
 </head>
 <body>
@@ -128,6 +132,7 @@
     <option value="bar_cafe">Bars & cafés</option>
     <option value="restaurant">Restaurants</option>
   </select>
+  <label><input id="stableOnly" type="checkbox"> Stable (&gt;45 min)</label>
   <span class="search-wrap">
     <input id="search" type="search" placeholder="rue, café, resto…" autocomplete="off">
     <div id="suggest"></div>
@@ -142,6 +147,6 @@
   <div><span class="sw dash" style="background:#f5b700"></span>terrasse probable (non taguée)</div>
 </div>
 <script src="/static/vendor/maplibre-gl.js?v=5"></script>
-<script src="/static/app.js?v=11"></script>
+<script src="/static/app.js?v=12"></script>
 </body>
 </html>

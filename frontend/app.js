@@ -11,6 +11,7 @@ const stats = document.getElementById('stats');
 const weatherEl = document.getElementById('weather');
 const slider = document.getElementById('timeSlider');
 const timeLabel = document.getElementById('timeLabel');
+const stableOnly = document.getElementById('stableOnly');
 stats.textContent = 'init…';
 
 if (typeof maplibregl === 'undefined') {
@@ -48,17 +49,37 @@ map.on('load', () => {
   map.addLayer({
     id: 'bars-halo', type: 'circle', source: 'bars',
     paint: {
-      'circle-radius': ['case', ['get', 'confirmed'], 9, 6.5],
+      'circle-radius': ['case',
+        ['!', ['get', 'confirmed']], 6.5,
+        ['==', ['get', 'sunny'], false], 9,
+        ['get', 'stable'], 10,
+        7.5,
+      ],
       'circle-color': '#ffffff',
-      'circle-opacity': ['case', ['get', 'confirmed'], 1, 0.85],
+      'circle-opacity': ['case',
+        ['!', ['get', 'confirmed']], 0.85,
+        ['==', ['get', 'sunny'], false], 1,
+        ['get', 'stable'], 1,
+        0.55,
+      ],
     },
   });
   map.addLayer({
     id: 'bars-dot', type: 'circle', source: 'bars',
     paint: {
-      'circle-radius': ['case', ['get', 'confirmed'], 7, 4.5],
+      'circle-radius': ['case',
+        ['!', ['get', 'confirmed']], 4.5,
+        ['==', ['get', 'sunny'], false], 7,
+        ['get', 'stable'], 7.5,
+        5.5,
+      ],
       'circle-color': ['case', ['get', 'sunny'], '#f5b700', '#4a5b6b'],
-      'circle-opacity': ['case', ['get', 'confirmed'], 1, 0.78],
+      'circle-opacity': ['case',
+        ['!', ['get', 'confirmed']], 0.78,
+        ['==', ['get', 'sunny'], false], 1,
+        ['get', 'stable'], 1,
+        0.5,
+      ],
       'circle-stroke-width': 0,
     },
   });
@@ -87,11 +108,24 @@ function fmtDur(min) {
   return m ? `${h} h ${String(m).padStart(2,'0')}` : `${h} h`;
 }
 
+function fmtTime(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  return `${pad(d.getHours())}h${pad(d.getMinutes())}`;
+}
+
 function popupHTML(b, forecast) {
   const tLabel = b.terrace_confirmed ? 'terrasse confirmée' : 'terrasse probable';
   const cLabel = b.category === 'restaurant' ? 'resto' : 'bar/café';
   const badge = b.sunny ? '☀️' : '🌑';
   const name = b.name || '(sans nom)';
+
+  let stabBadge = '';
+  if (forecast && forecast.sunny) {
+    stabBadge = forecast.stable
+      ? `<span class="stab-badge stable">stable</span>`
+      : `<span class="stab-badge fugace">fugace</span>`;
+  }
 
   let body;
   if (!forecast) {
@@ -102,15 +136,19 @@ function popupHTML(b, forecast) {
     } else {
       const d = fmtDur(forecast.minutes_left);
       const suffix = forecast.capped ? '+' : '';
+      const at = forecast.shadow_at ? `<div class="popup-hero-sub">jusqu'à ${fmtTime(forecast.shadow_at)}</div>` : '';
       body = `<div class="popup-hero">
         <div class="popup-hero-metric">${d}${suffix}</div>
         <div class="popup-hero-label">encore au soleil</div>
+        ${at}
       </div>`;
     }
   } else if (!forecast.sunny && forecast.minutes_until_sunny != null) {
+    const at = forecast.sun_at ? `<div class="popup-hero-sub">dès ${fmtTime(forecast.sun_at)}</div>` : '';
     body = `<div class="popup-hero">
       <div class="popup-hero-metric shadow">${fmtDur(forecast.minutes_until_sunny)}</div>
       <div class="popup-hero-label">au soleil dans</div>
+      ${at}
     </div>`;
   } else {
     const msg = forecast.sunny ? 'soleil jusqu\'au coucher' : 'à l\'ombre jusqu\'au coucher';
@@ -119,7 +157,7 @@ function popupHTML(b, forecast) {
 
   return `<div class="popup-card">
     <div class="popup-head">
-      <div class="popup-title">${name}</div>
+      <div class="popup-title">${name} ${stabBadge}</div>
       <div class="popup-badge">${badge}</div>
     </div>
     <div class="popup-meta">${tLabel} · ${cLabel}</div>
@@ -154,7 +192,12 @@ function renderWeather() {
 function render() {
   if (!lastData) return;
   const cat = filterSel.value;
-  const bars = lastData.bars.filter(b => cat === 'all' || b.category === cat);
+  const onlyStable = stableOnly?.checked;
+  const bars = lastData.bars.filter(b => {
+    if (cat !== 'all' && b.category !== cat) return false;
+    if (onlyStable && !(b.sunny && b.stable)) return false;
+    return true;
+  });
 
   let sunny = 0, sunnyConfirmed = 0, confirmed = 0;
   const features = [];
@@ -169,6 +212,7 @@ function render() {
       geometry: { type: 'Point', coordinates: [b.lon, b.lat] },
       properties: {
         sunny: !!b.sunny,
+        stable: !!b.stable,
         confirmed: !!b.terrace_confirmed,
         bar: JSON.stringify(b),
       },
@@ -249,6 +293,7 @@ document.getElementById('now').addEventListener('click', setNow);
 whenInput.addEventListener('change', refresh);
 whenInput.addEventListener('input', refresh);
 filterSel.addEventListener('change', render);
+stableOnly?.addEventListener('change', render);
 
 // --- Search / autocomplete ---
 fetch('/data/streets_18e.json').then(r => r.json()).then(s => { streets = s; }).catch(() => {});

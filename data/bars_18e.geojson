@@ -25170,24 +25170,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.3458867,
-          48.8921336
-        ]
-      },
-      "properties": {
-        "id": "node/13608127553",
-        "name": "Pizza Hut",
-        "amenity": "restaurant",
-        "category": "restaurant",
-        "terrace": null,
-        "terrace_confirmed": false
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           2.3364851,
           48.8832618
         ]

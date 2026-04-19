@@ -103,6 +103,9 @@ map.on('load', () => {
       .setLngLat([b.lon, b.lat])
       .setHTML(popupHTML(b, null))
       .addTo(map);
+    if (window.matchMedia('(max-width: 640px)').matches) {
+      map.easeTo({ center: [b.lon, b.lat], offset: [0, -120], duration: 350 });
+    }
     wireReportForm(popup, b);
     hydratePopup(popup, b);
   });
@@ -170,7 +173,7 @@ function popupHTML(b, forecast) {
   const alreadyReported = localStorage.getItem('reported:' + b.id);
   const footer = alreadyReported
     ? `<div class="popup-footer muted">✓ signalé</div>`
-    : `<div class="popup-footer"><a href="#" class="report-link" data-bar-id="${b.id}">signaler une erreur</a></div>`;
+    : `<div class="popup-footer"><a href="#" class="report-link" data-bar-id="${b.id}">signaler</a></div>`;
 
   return `<div class="popup-card" data-bar-id="${b.id}">
     <div class="popup-head">
@@ -190,6 +193,8 @@ function reportFormHTML(b) {
       <div class="popup-title">Signaler — ${name}</div>
     </div>
     <div class="report-body">
+      <label class="rf-radio"><input type="radio" name="rtype" value="has_terrace"> 🪑 Terrasse bien présente <span class="rf-hint">confirmer</span></label>
+      <label class="rf-radio"><input type="radio" name="rtype" value="has_sun"> ☀️ Soleil bien présent <span class="rf-hint">confirmer</span></label>
       <label class="rf-radio"><input type="radio" name="rtype" value="no_terrace"> Pas de terrasse ici</label>
       <label class="rf-radio"><input type="radio" name="rtype" value="no_sun"> Pas de soleil ici</label>
       <div class="rf-sub" hidden>
@@ -226,7 +231,7 @@ function wireReportForm(popup, b) {
   function computeType() {
     const top = form.querySelector('input[name="rtype"]:checked')?.value;
     if (!top) return null;
-    if (top === 'no_terrace') return 'no_terrace';
+    if (top !== 'no_sun') return top;
     return form.querySelector('input[name="rsub"]:checked')?.value || null;
   }
   function refresh() {

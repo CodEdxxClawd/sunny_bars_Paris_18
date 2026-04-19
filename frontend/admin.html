@@ -17,6 +17,8 @@
   .tag.no-terrace { background: #f7d3d3; color: #7a0000; }
   .tag.no-sun-permanent { background: #e4e3f0; color: #2e3f6b; }
   .tag.no-sun-temporary { background: #fde3cc; color: #8a4a10; }
+  .tag.has-terrace { background: #e4f0dc; color: #2e5a1c; }
+  .tag.has-sun { background: #fff2c2; color: #7a5a00; }
   .actions { display: flex; gap: 8px; margin-top: 10px; }
   .btn { font-size: 12px; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(0,0,0,.1); background: #fff; cursor: pointer; color: #2b2f38; text-decoration: none; display: inline-block; }
   .btn:hover { background: #faf6ea; }
@@ -59,7 +61,7 @@ function render(reports) {
     return;
   }
   listEl.innerHTML = reports.map(r => {
-    const kindLabel = (r.labels || []).find(l => l.startsWith('no-')) || '';
+    const kindLabel = (r.labels || []).find(l => l.startsWith('no-') || l.startsWith('has-')) || '';
     const tag = kindLabel ? `<span class="tag ${kindLabel}">${r.kind}</span>` : '';
     const date = new Date(r.created_at).toLocaleString('fr-FR', { dateStyle: 'short', timeStyle: 'short' });
     const applyBtn = kindLabel === 'no-terrace'

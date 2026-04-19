@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Sunny Bars — 18e</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5b700">
 <link rel="stylesheet" href="/static/vendor/maplibre-gl.css?v=4">
 <style>
   :root {
@@ -15,10 +16,15 @@
     --shadow-lg: 0 12px 32px rgba(0,0,0,.12), 0 1px 0 rgba(255,255,255,.6) inset;
     --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
   }
-  html, body { margin: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; color: var(--ink); }
+  html, body { margin: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; color: var(--ink); -webkit-tap-highlight-color: transparent; }
+  body { overscroll-behavior: none; }
+  button, select, input[type="checkbox"], .btn, .rf-radio, .report-link { touch-action: manipulation; }
   #map { position: absolute; inset: 0; }
   header {
-    position: absolute; top: 12px; left: 12px; right: 12px;
+    position: absolute;
+    top: calc(12px + env(safe-area-inset-top));
+    left: calc(12px + env(safe-area-inset-left));
+    right: calc(12px + env(safe-area-inset-right));
     display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
     padding: 10px 14px;
     background: var(--card);
@@ -79,7 +85,10 @@
     opacity: .78;
   }
   .legend {
-    position: absolute; bottom: 16px; left: 16px; z-index: 1000;
+    position: absolute;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    left: calc(16px + env(safe-area-inset-left));
+    z-index: 1000;
     background: var(--card);
     backdrop-filter: blur(14px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -136,6 +145,25 @@
   .rf-status { font-size: 12px; text-align: center; min-height: 16px; }
   .rf-status.ok { color: #3f6b2e; }
   .rf-status.err { color: #a43a3a; }
+
+  @media (max-width: 640px) {
+    header { gap: 8px; padding: 8px 10px; }
+    header h1 { font-size: 14px; }
+    input[type="datetime-local"], input[type="search"], select, button {
+      font-size: 16px;
+      padding: 10px 12px;
+      min-height: 44px;
+    }
+    header label { font-size: 14px; }
+    #search { width: 100%; }
+    .search-wrap { flex: 1 1 100%; }
+    .slider-wrap { flex: 1 1 100%; max-width: none; }
+    .rf-radio { min-height: 44px; font-size: 15px; }
+    .rf-cancel, .rf-submit { min-height: 44px; font-size: 14px; padding: 10px 16px; }
+    .btn { min-height: 44px; font-size: 14px; padding: 10px 14px; }
+    .report-link { padding: 6px 0; display: inline-block; }
+    .legend { font-size: 11px; padding: 8px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -167,6 +195,6 @@
   <div><span class="sw ring"></span>terrasse probable (non taguée)</div>
 </div>
 <script src="/static/vendor/maplibre-gl.js?v=5"></script>
-<script src="/static/app.js?v=14"></script>
+<script src="/static/app.js?v=16"></script>
 </body>
 </html>

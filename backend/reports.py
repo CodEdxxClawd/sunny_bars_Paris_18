@@ -20,12 +20,20 @@ REPORT_TYPES = {
     "no_terrace": ("pas de terrasse", "no-terrace"),
     "no_sun_temporary": ("pas de soleil (ponctuel)", "no-sun-temporary"),
     "no_sun_permanent": ("pas de soleil (permanent)", "no-sun-permanent"),
+    "has_terrace": ("terrasse bien présente", "has-terrace"),
+    "has_sun": ("soleil bien présent", "has-sun"),
 }
 
 
 class ReportRequest(BaseModel):
     bar_id: str
-    type: Literal["no_terrace", "no_sun_temporary", "no_sun_permanent"]
+    type: Literal[
+        "no_terrace",
+        "no_sun_temporary",
+        "no_sun_permanent",
+        "has_terrace",
+        "has_sun",
+    ]
     datetime: str
 
 

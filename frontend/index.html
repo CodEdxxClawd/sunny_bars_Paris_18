@@ -48,6 +48,8 @@
   button { cursor: pointer; font-weight: 500; }
   button:hover { background: #fff; }
   #stats { font-size: 12px; color: var(--muted); margin-left: auto; }
+  #sheetToggle { display: none; }
+  #sheetBackdrop { display: none; }
   .search-wrap { position: relative; }
   #search { width: 220px; }
   #suggest {
@@ -147,30 +149,117 @@
   .rf-status.err { color: #a43a3a; }
 
   @media (max-width: 640px) {
-    header { gap: 8px; padding: 8px 10px; }
-    header h1 { font-size: 14px; }
+    header { gap: 8px; padding: 8px 12px; flex-wrap: nowrap; }
+    header h1 { font-size: 14px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     input[type="datetime-local"], input[type="search"], select, button {
       font-size: 16px;
       padding: 10px 12px;
       min-height: 44px;
     }
     header label { font-size: 14px; }
-    #search { width: 100%; }
-    .search-wrap { flex: 1 1 100%; }
-    .slider-wrap { flex: 1 1 100%; max-width: none; }
+
+    /* Hide desktop controls in header on mobile — they move to sheet */
+    header .ctrl-when, header .ctrl-now, header #filter, header .ctrl-stable, header .search-wrap, header #stats { display: none; }
+    header #weather { font-size: 11px; padding: 4px 9px; }
+
+    /* Settings toggle — visible on mobile */
+    #sheetToggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; min-height: 40px; padding: 0; font-size: 20px; border-radius: 10px;
+      background: rgba(255,255,255,.85); border: 1px solid var(--card-border);
+    }
+
+    /* Bottom sheet */
+    #sheet {
+      position: fixed;
+      left: 0; right: 0;
+      bottom: 0;
+      z-index: 2500;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      border-top-left-radius: 18px; border-top-right-radius: 18px;
+      box-shadow: 0 -8px 30px rgba(0,0,0,.18);
+      padding: 6px 16px calc(20px + env(safe-area-inset-bottom));
+      transform: translateY(100%);
+      transition: transform .28s cubic-bezier(.2,.7,.2,1);
+      display: flex; flex-direction: column; gap: 12px;
+      max-height: 80vh; overflow-y: auto;
+    }
+    #sheet.open { transform: translateY(0); }
+    #sheet .sheet-handle {
+      width: 40px; height: 4px; border-radius: 2px; background: #d0ccc3;
+      margin: 6px auto 8px;
+    }
+    #sheet .sheet-row { display: flex; flex-direction: column; gap: 6px; }
+    #sheet .sheet-row > label { font-size: 12px; color: var(--muted); font-weight: 500; }
+    #sheet .search-wrap { display: block; }
+    #sheet #search { width: 100%; box-sizing: border-box; }
+    #sheet #suggest { position: absolute; }
+    #sheet .ctrl-stable { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink); }
+    #sheet #filter, #sheet #when { width: 100%; box-sizing: border-box; }
+    #sheet .sheet-stats { font-size: 12px; color: var(--muted); text-align: center; padding-top: 4px; border-top: 1px solid #f1efe9; }
+    #sheet .sheet-now { align-self: stretch; }
+
+    #sheetBackdrop {
+      display: block;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.35);
+      z-index: 2400;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s;
+    }
+    #sheetBackdrop.open { opacity: 1; pointer-events: auto; }
+
+    /* Floating time bar at bottom */
+    header .slider-wrap { display: none; }
+    #timebar {
+      position: fixed;
+      left: calc(12px + env(safe-area-inset-left));
+      right: calc(12px + env(safe-area-inset-right));
+      bottom: calc(12px + env(safe-area-inset-bottom));
+      z-index: 1500;
+      background: var(--card);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-lg);
+      padding: 10px 14px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    #timebar .tb-label { font-size: 13px; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; min-width: 48px; }
+    #timebar input[type="range"] {
+      flex: 1; accent-color: var(--accent); height: 44px; margin: 0;
+    }
+
+    /* Legend: compact on mobile, above timebar */
+    .legend {
+      bottom: calc(78px + env(safe-area-inset-bottom));
+      font-size: 11px; padding: 8px 12px;
+      line-height: 1.5;
+    }
+
     .rf-radio { min-height: 44px; font-size: 15px; }
     .rf-cancel, .rf-submit { min-height: 44px; font-size: 14px; padding: 10px 16px; }
     .btn { min-height: 44px; font-size: 14px; padding: 10px 14px; }
     .report-link { padding: 6px 0; display: inline-block; }
-    .legend { font-size: 11px; padding: 8px 12px; }
+  }
+
+  /* Desktop : hide sheet / timebar / toggle entirely */
+  @media (min-width: 641px) {
+    #sheet, #sheetBackdrop { display: none !important; }
+    #timebar { display: none !important; }
+    #sheetToggle { display: none !important; }
   }
 </style>
 </head>
 <body>
 <header>
   <h1>☀️ Sunny Bars · 18e</h1>
-  <label>Quand <input id="when" type="datetime-local"></label>
-  <button id="now">maintenant</button>
+  <label class="ctrl-when">Quand <input id="when" type="datetime-local"></label>
+  <button id="now" class="ctrl-now">maintenant</button>
   <span class="slider-wrap">
     <input id="timeSlider" type="range" min="0" max="1" step="1" value="0" disabled>
     <span id="timeLabel">--:--</span>
@@ -180,21 +269,28 @@
     <option value="bar_cafe">Bars & cafés</option>
     <option value="restaurant">Restaurants</option>
   </select>
-  <label><input id="stableOnly" type="checkbox"> Stable (&gt;45 min)</label>
+  <label class="ctrl-stable"><input id="stableOnly" type="checkbox"> Stable (&gt;45 min)</label>
   <span class="search-wrap">
     <input id="search" type="search" placeholder="rue, café, resto…" autocomplete="off">
     <div id="suggest"></div>
   </span>
   <span id="weather" class="hidden"></span>
   <span id="stats"></span>
+  <button id="sheetToggle" aria-label="réglages">⚙</button>
 </header>
 <div id="map"></div>
+<div id="sheetBackdrop"></div>
+<div id="sheet" role="dialog" aria-label="réglages">
+  <div class="sheet-handle"></div>
+  <div id="sheetSlots"></div>
+</div>
+<div id="timebar"></div>
 <div class="legend">
   <div><span class="sw" style="background:#f5b700"></span>terrasse confirmée, au soleil</div>
   <div><span class="sw" style="background:#4a5b6b"></span>terrasse confirmée, à l'ombre</div>
   <div><span class="sw ring"></span>terrasse probable (non taguée)</div>
 </div>
 <script src="/static/vendor/maplibre-gl.js?v=5"></script>
-<script src="/static/app.js?v=16"></script>
+<script src="/static/app.js?v=17"></script>
 </body>
 </html>

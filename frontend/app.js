@@ -463,3 +463,84 @@ suggestBox.addEventListener('mousedown', (e) => {
 });
 
 map.on('load', () => { setNow(); });
+
+// --- Mobile layout : move controls into bottom sheet + floating timebar ---
+(function setupMobileLayout() {
+  const mq = window.matchMedia('(max-width: 640px)');
+  if (!mq.matches) return;
+
+  const sheet = document.getElementById('sheet');
+  const sheetSlots = document.getElementById('sheetSlots');
+  const backdrop = document.getElementById('sheetBackdrop');
+  const toggle = document.getElementById('sheetToggle');
+  const timebar = document.getElementById('timebar');
+  if (!sheet || !timebar) return;
+
+  // Move time slider into floating bar
+  const sliderWrap = document.querySelector('header .slider-wrap');
+  if (sliderWrap) {
+    const label = document.createElement('span');
+    label.className = 'tb-label';
+    label.id = 'tbLabel';
+    timebar.appendChild(label);
+    timebar.appendChild(sliderWrap.querySelector('#timeSlider'));
+    // Mirror timeLabel into tb-label
+    const updateTb = () => { label.textContent = timeLabel.textContent; };
+    new MutationObserver(updateTb).observe(timeLabel, { childList: true, characterData: true, subtree: true });
+    updateTb();
+  }
+
+  // Build sheet rows
+  function row(labelText, el) {
+    const r = document.createElement('div');
+    r.className = 'sheet-row';
+    if (labelText) {
+      const l = document.createElement('label');
+      l.textContent = labelText;
+      r.appendChild(l);
+    }
+    r.appendChild(el);
+    sheetSlots.appendChild(r);
+  }
+  const whenLabel = document.querySelector('header .ctrl-when');
+  if (whenLabel) row('Quand', whenLabel.querySelector('#when'));
+  const nowBtn = document.getElementById('now');
+  if (nowBtn) { nowBtn.classList.add('sheet-now'); row('', nowBtn); }
+  const filterEl = document.getElementById('filter');
+  if (filterEl) row('Catégorie', filterEl);
+  const stableLabel = document.querySelector('header .ctrl-stable');
+  if (stableLabel) {
+    stableLabel.classList.add('ctrl-stable');
+    sheetSlots.appendChild(stableLabel);
+  }
+  const searchWrap = document.querySelector('header .search-wrap');
+  if (searchWrap) row('Recherche', searchWrap);
+
+  // Stats line at bottom of sheet
+  const statsMirror = document.createElement('div');
+  statsMirror.className = 'sheet-stats';
+  sheetSlots.appendChild(statsMirror);
+  new MutationObserver(() => { statsMirror.textContent = stats.textContent; })
+    .observe(stats, { childList: true, characterData: true, subtree: true });
+
+  // Toggle
+  function open() { sheet.classList.add('open'); backdrop.classList.add('open'); }
+  function close() { sheet.classList.remove('open'); backdrop.classList.remove('open'); }
+  toggle.addEventListener('click', () => {
+    sheet.classList.contains('open') ? close() : open();
+  });
+  backdrop.addEventListener('click', close);
+
+  // Swipe-down to dismiss
+  let startY = null;
+  sheet.addEventListener('touchstart', (e) => {
+    if (sheet.scrollTop > 0) return;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  sheet.addEventListener('touchmove', (e) => {
+    if (startY == null) return;
+    const dy = e.touches[0].clientY - startY;
+    if (dy > 60) { close(); startY = null; }
+  }, { passive: true });
+  sheet.addEventListener('touchend', () => { startY = null; });
+})();

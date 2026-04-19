@@ -265,9 +265,17 @@
       flex: 1; accent-color: var(--accent); height: 44px; margin: 0;
     }
 
+    /* Push MapLibre's bottom controls above the floating timebar */
+    .maplibregl-ctrl-bottom-right {
+      bottom: calc(72px + env(safe-area-inset-bottom)) !important;
+    }
+    .maplibregl-ctrl-bottom-left {
+      bottom: calc(72px + env(safe-area-inset-bottom)) !important;
+    }
+
     /* Legend: collapsed button on mobile, above timebar */
     .legend {
-      bottom: calc(78px + env(safe-area-inset-bottom));
+      bottom: calc(132px + env(safe-area-inset-bottom));
       font-size: 11px; padding: 0;
       line-height: 1.5;
       cursor: pointer;
@@ -340,7 +348,7 @@
 <header>
   <h1>☀️ Sunny Bars · 18e</h1>
   <label class="ctrl-when">Quand <input id="when" type="datetime-local"></label>
-  <button id="now" class="ctrl-now">maintenant</button>
+  <button id="now" class="ctrl-now">Maintenant</button>
   <span class="slider-wrap">
     <input id="timeSlider" type="range" min="0" max="1" step="1" value="0" disabled>
     <span id="timeLabel">--:--</span>
@@ -352,7 +360,7 @@
   </select>
   <label class="ctrl-stable"><input id="stableOnly" type="checkbox"> Stable (&gt;45 min)</label>
   <span class="search-wrap">
-    <input id="search" type="search" placeholder="rue, café, resto…" autocomplete="off">
+    <input id="search" type="search" placeholder="Rue, café, resto…" autocomplete="off">
     <div id="suggest"></div>
   </span>
   <span id="weather" class="hidden"></span>
@@ -372,12 +380,12 @@
   <div id="barSheetBody"></div>
 </div>
 <div class="legend">
-  <div><span class="sw" style="background:#f5b700"></span>terrasse confirmée, au soleil</div>
-  <div><span class="sw" style="background:#4a5b6b"></span>terrasse confirmée, à l'ombre</div>
-  <div><span class="sw ring"></span>terrasse probable (non taguée)</div>
+  <div><span class="sw" style="background:#f5b700"></span>Terrasse confirmée, au soleil</div>
+  <div><span class="sw" style="background:#4a5b6b"></span>Terrasse confirmée, à l'ombre</div>
+  <div><span class="sw ring"></span>Terrasse probable (non taguée)</div>
 </div>
 <script src="/static/vendor/maplibre-gl.js?v=5"></script>
-<script src="/static/app.js?v=20"></script>
+<script src="/static/app.js?v=21"></script>
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {

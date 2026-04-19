@@ -1,7 +1,7 @@
-const VERSION = 'sunny-bars-v1';
+const VERSION = 'sunny-bars-v2';
 const SHELL = [
   '/',
-  '/static/app.js?v=20',
+  '/static/app.js?v=21',
   '/static/vendor/maplibre-gl.css?v=4',
   '/static/style.json',
   '/icon.svg',

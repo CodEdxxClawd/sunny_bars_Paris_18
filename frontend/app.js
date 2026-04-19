@@ -12,7 +12,7 @@ const weatherEl = document.getElementById('weather');
 const slider = document.getElementById('timeSlider');
 const timeLabel = document.getElementById('timeLabel');
 const stableOnly = document.getElementById('stableOnly');
-stats.textContent = 'init…';
+stats.textContent = 'Init…';
 
 if (typeof maplibregl === 'undefined') {
   stats.textContent = 'MapLibre non chargé';
@@ -99,13 +99,14 @@ map.on('load', () => {
     const f = e.features[0];
     if (!f) return;
     const b = JSON.parse(f.properties.bar);
+    const popup = new maplibregl.Popup({ offset: 12, className: 'popup-premium', closeButton: false })
+      .setLngLat([b.lon, b.lat])
+      .setHTML(popupHTML(b, null))
+      .addTo(map);
     const isMobile = window.matchMedia('(max-width: 640px)').matches;
-    const popup = isMobile
-      ? openBarSheet(b)
-      : new maplibregl.Popup({ offset: 12, className: 'popup-premium', closeButton: false })
-          .setLngLat([b.lon, b.lat])
-          .setHTML(popupHTML(b, null))
-          .addTo(map);
+    if (isMobile) {
+      map.easeTo({ center: [b.lon, b.lat], offset: [0, -120], duration: 350 });
+    }
     wireReportForm(popup, b);
     hydratePopup(popup, b);
   });
@@ -130,50 +131,50 @@ function fmtTime(iso) {
 }
 
 function popupHTML(b, forecast) {
-  const tLabel = b.terrace_confirmed ? 'terrasse confirmée' : 'terrasse probable';
-  const cLabel = b.category === 'restaurant' ? 'resto' : 'bar/café';
+  const tLabel = b.terrace_confirmed ? 'Terrasse confirmée' : 'Terrasse probable';
+  const cLabel = b.category === 'restaurant' ? 'Resto' : 'Bar/café';
   const badge = b.sunny ? '☀️' : '🌑';
   const name = b.name || '(sans nom)';
 
   let stabBadge = '';
   if (forecast && forecast.sunny) {
     stabBadge = forecast.stable
-      ? `<span class="stab-badge stable">stable</span>`
-      : `<span class="stab-badge fugace">fugace</span>`;
+      ? `<span class="stab-badge stable">Stable</span>`
+      : `<span class="stab-badge fugace">Fugace</span>`;
   }
 
   let body;
   if (!forecast) {
-    body = `<div class="popup-note">calcul…</div>`;
+    body = `<div class="popup-note">Calcul…</div>`;
   } else if (forecast.sunny && forecast.minutes_left != null) {
     if (forecast.minutes_left === 0) {
-      body = `<div class="popup-note">sur le point de passer à l'ombre</div>`;
+      body = `<div class="popup-note">Sur le point de passer à l'ombre</div>`;
     } else {
       const d = fmtDur(forecast.minutes_left);
       const suffix = forecast.capped ? '+' : '';
-      const at = forecast.shadow_at ? `<div class="popup-hero-sub">jusqu'à ${fmtTime(forecast.shadow_at)}</div>` : '';
+      const at = forecast.shadow_at ? `<div class="popup-hero-sub">Jusqu'à ${fmtTime(forecast.shadow_at)}</div>` : '';
       body = `<div class="popup-hero">
         <div class="popup-hero-metric">${d}${suffix}</div>
-        <div class="popup-hero-label">encore au soleil</div>
+        <div class="popup-hero-label">Encore au soleil</div>
         ${at}
       </div>`;
     }
   } else if (!forecast.sunny && forecast.minutes_until_sunny != null) {
-    const at = forecast.sun_at ? `<div class="popup-hero-sub">dès ${fmtTime(forecast.sun_at)}</div>` : '';
+    const at = forecast.sun_at ? `<div class="popup-hero-sub">Dès ${fmtTime(forecast.sun_at)}</div>` : '';
     body = `<div class="popup-hero">
       <div class="popup-hero-metric shadow">${fmtDur(forecast.minutes_until_sunny)}</div>
-      <div class="popup-hero-label">au soleil dans</div>
+      <div class="popup-hero-label">Au soleil dans</div>
       ${at}
     </div>`;
   } else {
-    const msg = forecast.sunny ? 'soleil jusqu\'au coucher' : 'à l\'ombre jusqu\'au coucher';
+    const msg = forecast.sunny ? 'Soleil jusqu\'au coucher' : 'À l\'ombre jusqu\'au coucher';
     body = `<div class="popup-note">${msg}</div>`;
   }
 
   const alreadyReported = localStorage.getItem('reported:' + b.id);
   const footer = alreadyReported
-    ? `<div class="popup-footer muted">✓ signalé</div>`
-    : `<div class="popup-footer"><a href="#" class="report-link" data-bar-id="${b.id}">signaler</a></div>`;
+    ? `<div class="popup-footer muted">✓ Signalé</div>`
+    : `<div class="popup-footer"><a href="#" class="report-link" data-bar-id="${b.id}">Signaler</a></div>`;
 
   return `<div class="popup-card" data-bar-id="${b.id}">
     <div class="popup-head">
@@ -193,17 +194,17 @@ function reportFormHTML(b) {
       <div class="popup-title">Signaler — ${name}</div>
     </div>
     <div class="report-body">
-      <label class="rf-radio"><input type="radio" name="rtype" value="has_terrace"> 🪑 Terrasse bien présente <span class="rf-hint">confirmer</span></label>
-      <label class="rf-radio"><input type="radio" name="rtype" value="has_sun"> ☀️ Soleil bien présent <span class="rf-hint">confirmer</span></label>
+      <label class="rf-radio"><input type="radio" name="rtype" value="has_terrace"> 🪑 Terrasse bien présente <span class="rf-hint">Confirmer</span></label>
+      <label class="rf-radio"><input type="radio" name="rtype" value="has_sun"> ☀️ Soleil bien présent <span class="rf-hint">Confirmer</span></label>
       <label class="rf-radio"><input type="radio" name="rtype" value="no_terrace"> Pas de terrasse ici</label>
       <label class="rf-radio"><input type="radio" name="rtype" value="no_sun"> Pas de soleil ici</label>
       <div class="rf-sub" hidden>
-        <label class="rf-radio"><input type="radio" name="rsub" value="no_sun_temporary"> Ponctuel <span class="rf-hint">parasol, travaux…</span></label>
-        <label class="rf-radio"><input type="radio" name="rsub" value="no_sun_permanent"> Permanent <span class="rf-hint">arbre, bâtiment…</span></label>
+        <label class="rf-radio"><input type="radio" name="rsub" value="no_sun_temporary"> Ponctuel <span class="rf-hint">Parasol, travaux…</span></label>
+        <label class="rf-radio"><input type="radio" name="rsub" value="no_sun_permanent"> Permanent <span class="rf-hint">Arbre, bâtiment…</span></label>
       </div>
       <div class="rf-actions">
-        <button class="rf-cancel" type="button">annuler</button>
-        <button class="rf-submit" type="button" disabled>envoyer</button>
+        <button class="rf-cancel" type="button">Annuler</button>
+        <button class="rf-submit" type="button" disabled>Envoyer</button>
       </div>
       <div class="rf-status"></div>
     </div>
@@ -250,7 +251,7 @@ function wireReportForm(popup, b) {
     const t = computeType();
     if (!t) return;
     submitBtn.disabled = true;
-    status.textContent = 'envoi…';
+    status.textContent = 'Envoi…';
     status.className = 'rf-status';
     try {
       const r = await fetch('/report', {
@@ -261,11 +262,11 @@ function wireReportForm(popup, b) {
       const data = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(data.detail || `HTTP ${r.status}`);
       localStorage.setItem('reported:' + b.id, '1');
-      status.textContent = '✓ merci, ça aide à améliorer le site';
+      status.textContent = '✓ Merci, ça aide à améliorer le site';
       status.className = 'rf-status ok';
       setTimeout(() => popup.remove(), 1800);
     } catch (err) {
-      status.textContent = 'erreur : ' + err.message;
+      status.textContent = 'Erreur : ' + err.message;
       status.className = 'rf-status err';
       submitBtn.disabled = false;
     }
@@ -284,7 +285,7 @@ async function hydratePopup(popup, b) {
     }
   } catch (err) {
     if (popup.isOpen()) {
-      popup.setHTML(`<div class="popup-card"><div class="popup-head"><div class="popup-title">${b.name||'(sans nom)'}</div></div><div class="popup-note">erreur : ${err.message}</div></div>`);
+      popup.setHTML(`<div class="popup-card"><div class="popup-head"><div class="popup-title">${b.name||'(sans nom)'}</div></div><div class="popup-note">Erreur : ${err.message}</div></div>`);
     }
   }
 }
@@ -332,7 +333,7 @@ function render() {
   const src = map.getSource('bars');
   if (src) src.setData({ type: 'FeatureCollection', features });
 
-  stats.textContent = `${sunnyConfirmed}/${confirmed} confirmés au soleil · ${sunny}/${bars.length} total · ${lastData.elevation.toFixed(0)}° az ${lastData.azimuth.toFixed(0)}°`;
+  stats.textContent = `${sunnyConfirmed}/${confirmed} Confirmés au soleil · ${sunny}/${bars.length} total · ${lastData.elevation.toFixed(0)}° az ${lastData.azimuth.toFixed(0)}°`;
   renderWeather();
   syncSlider();
 }
@@ -350,20 +351,30 @@ async function fetchShadows() {
 }
 
 async function refresh() {
-  if (!whenInput.value) { stats.textContent = 'saisis une date'; return; }
-  stats.textContent = 'calcul…';
+  if (!whenInput.value) { stats.textContent = 'Saisis une date'; return; }
+  stats.textContent = 'Calcul…';
+  const dt = whenInput.value;
+  const sunshineP = fetch(`/sunshine?datetime=${encodeURIComponent(dt)}`)
+    .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)));
+  const shadowsP = fetch(`/shadows?datetime=${encodeURIComponent(dt)}`)
+    .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)));
   try {
-    const r = await fetch(`/sunshine?datetime=${encodeURIComponent(whenInput.value)}`);
-    if (!r.ok) throw new Error(`HTTP ${r.status} ${await r.text()}`);
-    lastData = await r.json();
+    lastData = await sunshineP;
   } catch (err) {
     console.error('sunshine fetch failed', err);
-    stats.textContent = `erreur : ${err.message}`;
+    stats.textContent = `Erreur : ${err.message}`;
     return;
   }
   render();
-  if (map.isStyleLoaded()) fetchShadows();
-  else map.once('idle', fetchShadows);
+  const applyShadows = async () => {
+    try {
+      const geo = await shadowsP;
+      const src = map.getSource('shadows');
+      if (src) src.setData(geo);
+    } catch (err) { console.error('shadows fetch failed', err); }
+  };
+  if (map.isStyleLoaded()) applyShadows();
+  else map.once('idle', applyShadows);
 }
 
 function setNow() { whenInput.value = localISO(new Date()); refresh(); }
@@ -462,7 +473,22 @@ suggestBox.addEventListener('mousedown', (e) => {
   if (div) pick(Number(div.dataset.i));
 });
 
-map.on('load', () => { setNow(); });
+// Kick off initial fetches in parallel with map loading
+whenInput.value = localISO(new Date());
+const initDt = whenInput.value;
+const initSunshine = fetch(`/sunshine?datetime=${encodeURIComponent(initDt)}`)
+  .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)));
+const initShadows = fetch(`/shadows?datetime=${encodeURIComponent(initDt)}`)
+  .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)));
+
+map.on('load', () => {
+  initSunshine.then(d => { lastData = d; render(); })
+    .catch(err => { stats.textContent = `Erreur : ${err.message}`; });
+  initShadows.then(geo => {
+    const apply = () => { const src = map.getSource('shadows'); if (src) src.setData(geo); };
+    if (map.isStyleLoaded()) apply(); else map.once('idle', apply);
+  }).catch(() => {});
+});
 
 // Legend collapse/expand on mobile
 (function setupLegend() {

@@ -99,13 +99,13 @@ map.on('load', () => {
     const f = e.features[0];
     if (!f) return;
     const b = JSON.parse(f.properties.bar);
-    const popup = new maplibregl.Popup({ offset: 12, className: 'popup-premium', closeButton: false })
-      .setLngLat([b.lon, b.lat])
-      .setHTML(popupHTML(b, null))
-      .addTo(map);
-    if (window.matchMedia('(max-width: 640px)').matches) {
-      map.easeTo({ center: [b.lon, b.lat], offset: [0, -120], duration: 350 });
-    }
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const popup = isMobile
+      ? openBarSheet(b)
+      : new maplibregl.Popup({ offset: 12, className: 'popup-premium', closeButton: false })
+          .setLngLat([b.lon, b.lat])
+          .setHTML(popupHTML(b, null))
+          .addTo(map);
     wireReportForm(popup, b);
     hydratePopup(popup, b);
   });
@@ -463,6 +463,64 @@ suggestBox.addEventListener('mousedown', (e) => {
 });
 
 map.on('load', () => { setNow(); });
+
+// --- Mobile bar-sheet (popup alternative) ---
+function openBarSheet(b) {
+  const sheet = document.getElementById('barSheet');
+  const body = document.getElementById('barSheetBody');
+  const backdrop = document.getElementById('barSheetBackdrop');
+  if (!sheet || !body) return null;
+
+  let open = true;
+  const wrap = {
+    _forecast: null,
+    setHTML(html) { body.innerHTML = html; },
+    getElement() { return sheet; },
+    isOpen() { return open; },
+    remove() {
+      if (!open) return;
+      open = false;
+      sheet.classList.remove('open');
+      backdrop.classList.remove('open');
+      cleanup();
+    },
+  };
+
+  body.innerHTML = popupHTML(b, null);
+  requestAnimationFrame(() => {
+    sheet.classList.add('open');
+    backdrop.classList.add('open');
+  });
+
+  function onBackdrop() { wrap.remove(); }
+  backdrop.addEventListener('click', onBackdrop);
+
+  let startY = null;
+  function onTs(e) {
+    if (sheet.scrollTop > 0) return;
+    startY = e.touches[0].clientY;
+  }
+  function onTm(e) {
+    if (startY == null) return;
+    const dy = e.touches[0].clientY - startY;
+    if (dy > 60) { wrap.remove(); startY = null; }
+  }
+  function onTe() { startY = null; }
+  sheet.addEventListener('touchstart', onTs, { passive: true });
+  sheet.addEventListener('touchmove', onTm, { passive: true });
+  sheet.addEventListener('touchend', onTe);
+
+  function cleanup() {
+    backdrop.removeEventListener('click', onBackdrop);
+    sheet.removeEventListener('touchstart', onTs);
+    sheet.removeEventListener('touchmove', onTm);
+    sheet.removeEventListener('touchend', onTe);
+    setTimeout(() => { if (!open) body.innerHTML = ''; }, 300);
+  }
+
+  map.easeTo({ center: [b.lon, b.lat], offset: [0, -80], duration: 350 });
+  return wrap;
+}
 
 // --- Mobile layout : move controls into bottom sheet + floating timebar ---
 (function setupMobileLayout() {
